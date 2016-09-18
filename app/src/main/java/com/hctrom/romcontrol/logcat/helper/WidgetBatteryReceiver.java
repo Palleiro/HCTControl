@@ -7,7 +7,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.hardware.Camera;
 import android.os.BatteryManager;
 import android.view.View;
 import android.widget.RemoteViews;
@@ -20,8 +19,6 @@ import com.hctrom.romcontrol.logcat.RecordingWidgetProvider;
  * Created by Palleiro on 18/09/2016.
  */
 public class WidgetBatteryReceiver extends BroadcastReceiver {
-    private static boolean isLightOn = false;
-    private static Camera camera;
 
     @Override
     public void onReceive(Context context, Intent intent) {
