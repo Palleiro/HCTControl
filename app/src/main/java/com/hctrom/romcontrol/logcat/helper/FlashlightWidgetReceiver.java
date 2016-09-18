@@ -6,10 +6,12 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.Camera;
+import android.preference.PreferenceManager;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
 import com.hctrom.romcontrol.R;
+import com.hctrom.romcontrol.logcat.RecordingWidgetProvider;
 
 /**
  * Created by Ivan on 18/09/2016.
@@ -29,7 +31,7 @@ public class FlashlightWidgetReceiver extends BroadcastReceiver {
         }
 */
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-        appWidgetManager.updateAppWidget(new ComponentName(context, WidgetHelper.class), views);
+        appWidgetManager.updateAppWidget(new ComponentName(context, RecordingWidgetProvider.class), views);
 
         if (isLightOn) {
             if (camera != null) {
@@ -37,6 +39,7 @@ public class FlashlightWidgetReceiver extends BroadcastReceiver {
                 camera.release();
                 camera = null;
                 isLightOn = false;
+                PreferenceManager.getDefaultSharedPreferences(context).edit().putInt("check_torch", 0).commit();
             }
 
         } else {
@@ -53,6 +56,7 @@ public class FlashlightWidgetReceiver extends BroadcastReceiver {
                     camera.setParameters(param);
                     camera.startPreview();
                     isLightOn = true;
+                    PreferenceManager.getDefaultSharedPreferences(context).edit().putInt("check_torch", 1).commit();
                 } catch (Exception e) {
                     Toast.makeText(context, "FLASH NO DETECTADO", Toast.LENGTH_SHORT).show();
                 }

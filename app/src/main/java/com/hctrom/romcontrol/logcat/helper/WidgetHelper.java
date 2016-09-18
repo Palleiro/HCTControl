@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.BatteryManager;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.RemoteViews;
 
@@ -72,11 +73,17 @@ public class WidgetHelper extends AppWidgetProvider {
 
 	private static void updateWidget(Context context, AppWidgetManager manager, int appWidgetId, boolean serviceRunning) {
 		final int BATTERY_STEPS = 10;
-		RemoteViews widgetViews = new RemoteViews("com.hctrom.romcontrol", R.layout.widget_catlog_hctcontrol);
+		RemoteViews widgetViews = new RemoteViews(context.getPackageName(), R.layout.widget_catlog_hctcontrol);
 		Intent intent = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
 
 		Intent receiver = new Intent(context, FlashlightWidgetReceiver.class);
 		receiver.setAction("COM_FLASHLIGHT");
+
+		if( PreferenceManager.getDefaultSharedPreferences(context).getInt("check_torch", 0) == 0) {
+			widgetViews.setImageViewResource(R.id.buttonTorch, R.drawable.widget_torch_off);
+		} else {
+			widgetViews.setImageViewResource(R.id.buttonTorch, R.drawable.widget_torch_on);
+		}
 
 		float  temp   = ((float) intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE,0)) / 10;
 		String st = String.valueOf(temp);
