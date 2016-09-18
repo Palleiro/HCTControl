@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
- * Created by Ivan on 25/05/2016.
+ * Created by Palleiro on 25/05/2016.
  */
 public class Shell {
     //Gets string for shell command to activate reboot menu items, using stericson RootTools lib

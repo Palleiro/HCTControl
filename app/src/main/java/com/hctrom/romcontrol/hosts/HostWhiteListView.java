@@ -25,7 +25,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Created by Ivan on 09/06/2016.
+ * Created by Palleiro on 09/06/2016.
  */
 public class HostWhiteListView extends AppCompatActivity {
     private ListView listView ;

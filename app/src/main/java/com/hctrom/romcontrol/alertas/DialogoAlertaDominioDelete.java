@@ -15,7 +15,7 @@ import com.hctrom.romcontrol.R;
 import com.hctrom.romcontrol.ThemeSelectorUtility;
 
 /**
- * Created by Ivan on 13/12/2015.
+ * Created by Palleiro on 13/12/2015.
  */
 public class DialogoAlertaDominioDelete extends DialogFragment {
     @Override

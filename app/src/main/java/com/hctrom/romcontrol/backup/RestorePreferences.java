@@ -29,7 +29,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * Created by Ivan on 24/05/2016.
+ * Created by Palleiro on 24/05/2016.
  */
 public class RestorePreferences {
     File prefdir = new File("/data/data/com.hctrom.romcontrol/shared_prefs");

@@ -15,7 +15,7 @@ import com.hctrom.romcontrol.ThemeSelectorUtility;
 import com.hctrom.romcontrol.build.prop.editor.BuildPropEditor;
 
 /**
- * Created by Ivan on 13/12/2015.
+ * Created by Palleiro on 13/12/2015.
  */
 public class DialogoAlertaBuildEdit extends DialogFragment {
     @Override

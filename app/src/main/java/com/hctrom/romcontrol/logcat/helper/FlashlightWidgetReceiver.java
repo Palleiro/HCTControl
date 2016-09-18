@@ -13,7 +13,7 @@ import com.hctrom.romcontrol.R;
 import com.hctrom.romcontrol.logcat.RecordingWidgetProvider;
 
 /**
- * Created by Ivan on 18/09/2016.
+ * Created by Palleiro on 18/09/2016.
  */
 public class FlashlightWidgetReceiver extends BroadcastReceiver {
     private static boolean isLightOn = false;

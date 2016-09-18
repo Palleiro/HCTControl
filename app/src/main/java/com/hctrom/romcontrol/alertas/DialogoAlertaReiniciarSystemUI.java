@@ -14,7 +14,7 @@ import com.hctrom.romcontrol.ThemeSelectorUtility;
 import com.hctrom.romcontrol.prefs.Shell;
 
 /**
- * Created by Ivan on 13/12/2015.
+ * Created by Palleiro on 13/12/2015.
  */
 public class DialogoAlertaReiniciarSystemUI extends DialogFragment {
     @Override

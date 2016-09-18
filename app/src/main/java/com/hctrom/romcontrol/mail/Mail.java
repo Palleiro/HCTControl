@@ -1,7 +1,7 @@
 package com.hctrom.romcontrol.mail;
 
 /**
- * Created by Ivan on 30/03/2016.
+ * Created by Palleiro on 30/03/2016.
  */
 
 import android.content.Intent;

@@ -18,7 +18,7 @@ import com.hctrom.romcontrol.prefs.Shell;
 import com.hctrom.romcontrol.sh.Scripts;
 
 /**
- * Created by Ivan on 13/12/2015.
+ * Created by Palleiro on 13/12/2015.
  */
 public class DialogoAlertaNivelSonido extends DialogFragment implements View.OnClickListener {
     private RadioButton stock;

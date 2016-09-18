@@ -1,7 +1,7 @@
 package com.hctrom.romcontrol.sh;
 
 /**
- * Created by Ivan on 26/05/2016.
+ * Created by Palleiro on 26/05/2016.
  */
 public class Scripts {
     String script;

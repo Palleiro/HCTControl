@@ -23,7 +23,7 @@ import com.hctrom.romcontrol.mail.Mail;
 import com.software.shell.fab.ActionButton;
 
 /**
- * Created by Ivan on 13/12/2015.
+ * Created by Palleiro on 13/12/2015.
  */
 public class LicenseDialogoAlerta extends DialogFragment implements View.OnClickListener {
     private Button licenses;

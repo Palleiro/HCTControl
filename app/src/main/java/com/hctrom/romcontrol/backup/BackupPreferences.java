@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 import java.util.Map;
 
 /**
- * Created by Ivan on 24/05/2016.
+ * Created by Palleiro on 24/05/2016.
  */
 public class BackupPreferences {
     File sddir = new File(Environment.getExternalStorageDirectory().getPath() + "/HCTControl");

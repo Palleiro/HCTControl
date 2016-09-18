@@ -1,7 +1,7 @@
 package com.hctrom.romcontrol.diagnostic;
 
 /**
- * Created by Ivan on 28/11/2015.
+ * Created by Palleiro on 28/11/2015.
  */
 
 import android.content.BroadcastReceiver;

@@ -1,7 +1,7 @@
 package com.hctrom.romcontrol.videotutorial;
 
 /**
- * Created by Ivan on 18/04/2016.
+ * Created by Palleiro on 18/04/2016.
  */
 
 import android.content.Context;
