@@ -74,6 +74,10 @@ public class WidgetHelper extends AppWidgetProvider {
 		final int BATTERY_STEPS = 10;
 		RemoteViews widgetViews = new RemoteViews("com.hctrom.romcontrol", R.layout.widget_catlog_hctcontrol);
 		Intent intent = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+
+		Intent receiver = new Intent(context, FlashlightWidgetReceiver.class);
+		receiver.setAction("COM_FLASHLIGHT");
+
 		float  temp   = ((float) intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE,0)) / 10;
 		String st = String.valueOf(temp);
 		widgetViews.setTextViewText(R.id.text_temp, st + "°C");
@@ -234,10 +238,12 @@ public class WidgetHelper extends AppWidgetProvider {
 		PendingIntent pendingIntent = getPendingIntent(context, appWidgetId);
 		PendingIntent pendingIntent1 = getHCTControl(context, appWidgetId);
 		PendingIntent pendingIntent2 = getPower(context, appWidgetId);
+		PendingIntent pendingIntent3 = PendingIntent.getBroadcast(context, 0, receiver, 0);
 
 		widgetViews.setOnClickPendingIntent(R.id.catlog_icon_widget, pendingIntent);
 		widgetViews.setOnClickPendingIntent(R.id.catlog_icon_hctcontrol, pendingIntent1);
 		widgetViews.setOnClickPendingIntent(R.id.widget_power, pendingIntent2);
+		widgetViews.setOnClickPendingIntent(R.id.buttonTorch, pendingIntent3);
 
 		manager.updateAppWidget(appWidgetId, widgetViews);
 

@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.CALL_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -132,6 +133,12 @@
 
             <meta-data android:name="android.appwidget.provider"
                 android:resource="@xml/widget_catlog_hct" />
+        </receiver>
+
+        <receiver android:name=".logcat.helper.FlashlightWidgetReceiver">
+            <intent-filter>
+                <action android:name="COM_FLASHLIGHT"></action>
+            </intent-filter>
         </receiver>
 
         <service android:name=".logcat.LogcatRecordingService"

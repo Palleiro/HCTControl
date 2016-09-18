@@ -197,6 +197,16 @@
 					android:layout_marginTop="-5dp"
 					android:src="@android:drawable/ic_lock_power_off"
 					android:tint="@color/myPrimaryColorHCT" />
+				<ImageButton
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:id="@+id/buttonTorch"
+					android:layout_alignParentTop="true"
+					android:layout_alignParentEnd="false"
+					android:layout_marginTop="-5dp"
+					android:layout_toLeftOf="@+id/widget_power"
+					android:background="@drawable/widget_torch"
+					android:layout_marginRight="10dp" />
 			</RelativeLayout>
 
 		</LinearLayout>
