@@ -6,7 +6,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.Camera;
-import android.preference.PreferenceManager;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
@@ -23,13 +22,15 @@ public class FlashlightWidgetReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_catlog_hctcontrol);
-/*
+
         if(isLightOn) {
             views.setImageViewResource(R.id.buttonTorch, R.drawable.widget_torch_off);
+            Toast.makeText(context, "¡¡ Linterna\nDesactivada !!", Toast.LENGTH_SHORT).show();
         } else {
             views.setImageViewResource(R.id.buttonTorch, R.drawable.widget_torch_on);
+            Toast.makeText(context, "¡¡ Linterna\nActivada !!", Toast.LENGTH_LONG).show();
         }
-*/
+
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
         appWidgetManager.updateAppWidget(new ComponentName(context, RecordingWidgetProvider.class), views);
 
@@ -39,7 +40,6 @@ public class FlashlightWidgetReceiver extends BroadcastReceiver {
                 camera.release();
                 camera = null;
                 isLightOn = false;
-                PreferenceManager.getDefaultSharedPreferences(context).edit().putInt("check_torch", 0).commit();
             }
 
         } else {
@@ -56,7 +56,6 @@ public class FlashlightWidgetReceiver extends BroadcastReceiver {
                     camera.setParameters(param);
                     camera.startPreview();
                     isLightOn = true;
-                    PreferenceManager.getDefaultSharedPreferences(context).edit().putInt("check_torch", 1).commit();
                 } catch (Exception e) {
                     Toast.makeText(context, "FLASH NO DETECTADO", Toast.LENGTH_SHORT).show();
                 }
