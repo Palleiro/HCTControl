@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@+id/fila0" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+        <RelativeLayout android:id="@+id/relative_acequott" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/imageViewAce" android:background="@drawable/acercade_aceqott" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="10.0dip" />
+            <TextView android:textSize="16.0dip" android:textStyle="bold" android:id="@+id/textAce" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Aceqott" android:layout_toEndOf="@id/imageViewAce" />
+            <TextView android:textSize="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Desarrollador" android:layout_below="@id/textAce" android:layout_toEndOf="@id/imageViewAce" />
+        </RelativeLayout>
+        <ImageView android:id="@+id/divisor0" android:layout_width="1.0dip" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        <RelativeLayout android:id="@+id/relative_jiterron" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/divisor0">
+            <ImageView android:id="@+id/imageViewGarrapatero123" android:background="@drawable/acercade_garrapatero" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="5.0dip" />
+            <TextView android:textSize="16.0dip" android:textStyle="bold" android:id="@+id/textGarrapatero123" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Garrapatero123" android:layout_toEndOf="@id/imageViewGarrapatero123" />
+            <TextView android:textSize="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Betatester" android:layout_below="@id/textGarrapatero123" android:layout_toEndOf="@id/imageViewGarrapatero123" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/fila1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <ImageView android:id="@+id/imageViewBenji" android:background="@drawable/acercade_benjitawx" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="10.0dip" />
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:id="@+id/textBenji" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Benjitawx" android:layout_toEndOf="@id/imageViewBenji" />
+        <TextView android:textSize="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Betatester" android:layout_below="@id/textBenji" android:layout_toEndOf="@id/imageViewBenji" />
+        <ImageView android:id="@+id/divisor1" android:layout_width="1.0dip" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@+id/imageViewMikele" android:background="@drawable/acercade_mikele" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="5.0dip" android:baselineAlignBottom="false" android:layout_toRightOf="@id/divisor1" android:layout_alignParentBottom="false" android:layout_alignWithParentIfMissing="false" android:layout_alignParentStart="false" android:layout_alignParentEnd="false" />
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:id="@+id/textMikele" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Mikele" android:layout_toEndOf="@id/imageViewMikele" />
+        <TextView android:textSize="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Betatester" android:layout_below="@id/textMikele" android:layout_toEndOf="@id/imageViewMikele" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/fila2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <ImageView android:id="@+id/imageViewGamberrete75" android:background="@drawable/acercade_gamberrete75" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="10.0dip" />
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:id="@+id/textGamberrete75" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Gamberrete75" android:layout_toEndOf="@id/imageViewGamberrete75" />
+        <TextView android:textSize="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Betatester" android:layout_below="@id/textGamberrete75" android:layout_toEndOf="@id/imageViewGamberrete75" />
+        <ImageView android:id="@+id/divisor2" android:layout_width="1.0dip" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@+id/imageViewkoko" android:background="@drawable/acercade_koko" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="5.0dip" android:baselineAlignBottom="false" android:layout_toRightOf="@id/divisor2" android:layout_alignParentBottom="false" android:layout_alignWithParentIfMissing="false" android:layout_alignParentStart="false" android:layout_alignParentEnd="false" />
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:id="@+id/textkoko" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Koko" android:layout_toEndOf="@id/imageViewkoko" />
+        <TextView android:textSize="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Betatester" android:layout_below="@id/textkoko" android:layout_toEndOf="@id/imageViewkoko" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/fila3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <ImageView android:id="@+id/imageViewSumejorpista" android:background="@drawable/acercade_sumejorpista" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="10.0dip" />
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:id="@+id/textSumejorpista" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Sumejorpista" android:layout_toEndOf="@id/imageViewSumejorpista" />
+        <TextView android:textSize="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Betatester" android:layout_below="@id/textSumejorpista" android:layout_toEndOf="@id/imageViewSumejorpista" />
+        <ImageView android:id="@+id/divisor3" android:layout_width="1.0dip" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@+id/imageViewEscaliboor" android:background="@drawable/acercade_escaliboor" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="5.0dip" android:layout_toRightOf="@id/divisor3" />
+        <TextView android:textSize="16.0dip" android:textStyle="bold" android:id="@+id/textEscaliboor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Escaliboor" android:layout_toEndOf="@id/imageViewEscaliboor" />
+        <TextView android:textSize="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Betatester" android:layout_below="@id/textEscaliboor" android:layout_toEndOf="@id/imageViewEscaliboor" />
+    </RelativeLayout>
+</LinearLayout>
