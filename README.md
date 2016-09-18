@@ -4,11 +4,7 @@
 
 [![Platform](http://img.shields.io/badge/platform-android-brightgreen.svg?style=flat)](http://developer.android.com/index.html) [![Language](http://img.shields.io/badge/language-java-orange.svg?style=flat)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-<<<<<<< HEAD
-### Librerías y dependencias utilizadas en este proyecto
-=======
 ### ● Librerías y dependencias utilizadas en este proyecto
->>>>>>> origin/master
 
 - Android SDK: [Google Inc.](https://developer.android.com/sdk/terms.html)
 
@@ -16,11 +12,6 @@
 
 - CustomSettingsForDevs: [Wubydax](https://github.com/wubydax/CustomSettingsForDevs)
 
-<<<<<<< HEAD
-- ColorPickerPreference: [Margaritov](https://github.com/attenzione/android-ColorPickerPreference)
-
-=======
->>>>>>> origin/master
 - CircleImageView: [Hdodenhof](https://github.com/hdodenhof/CircleImageView)
 
 - Fab Button: [Shell-software](https://github.com/shell-software/fab)
@@ -45,17 +36,11 @@
 
 - Blurry: [Wasabeef](https://github.com/wasabeef/Blurry)
 
-<<<<<<< HEAD
-Dar las gracias en nombre del `HCTeam` a todos los desarrolladores arriba mencionados por compartir su código y poder hacer esto más grande...
-
-### Capturas
-=======
 - HexConverter-v2.0: [Wubydax](https://github.com/wubydax/HexConverter-v2.0)
 
 ##### Dar las gracias en nombre del `HCTeam` a todos los desarrolladores arriba mencionados por compartir su código y poder hacer esto más grande...
 
 ### ● Capturas
->>>>>>> origin/master
 
 ![HCTControl](https://github.com/Palleiro/HCTControl/blob/master/HCTControl.png)
 
