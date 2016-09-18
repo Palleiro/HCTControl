@@ -135,9 +135,15 @@
                 android:resource="@xml/widget_catlog_hct" />
         </receiver>
 
-        <receiver android:name=".logcat.helper.FlashlightWidgetReceiver">
+        <receiver android:name=".logcat.helper.WidgetFlashlightReceiver">
             <intent-filter>
                 <action android:name="COM_FLASHLIGHT"></action>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".logcat.helper.WidgetBatteryReceiver">
+            <intent-filter>
+                <action android:name="COM_BATTERY"></action>
             </intent-filter>
         </receiver>
 
