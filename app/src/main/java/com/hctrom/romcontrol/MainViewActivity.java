@@ -187,7 +187,7 @@ public class MainViewActivity extends AppCompatActivity
             case 9:
                 BackupPreferences rp = new BackupPreferences(MainViewActivity.this);
                 rp.showBackupDialog();
-                //startActivity(new Intent(this, MainActivity.class));
+                //startActivity(new Intent(this, MainCropImageView.class));
                 break;
             case 10:
                 ChangeLog cl = new ChangeLog(this);

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mylayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    style="@style/AppTheme"
+    android:background="?attr/nav_drawer_bg_color"
+    tools:context=".cropper.MainCropImageView">
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/toolbar_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/toolbar_actionbar">
+
+        <RelativeLayout
+            android:id="@+id/rel_crop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/nav_drawer_bg_color"
+            android:paddingBottom="30dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <com.hctrom.romcontrol.cropper.CropImageView
+                android:id="@+id/CropImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                custom:imageResource="@drawable/header_image_samsung_light"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:layout_below="@+id/CropImageView">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/Button_buscar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="20dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:text="Seleccionar\nImagen"
+                        android:textColor="#fff"
+                        android:background="?attr/colorAccent"
+                        style="@style/AppTheme" />
+
+                    <Button
+                        android:id="@+id/Button_rotate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="20dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:text="Rotar\nImagen"
+                        android:textColor="#fff"
+                        android:layout_alignParentEnd="true"
+                        android:background="?attr/colorAccent"
+                        style="@style/AppTheme" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/fixedAspectRatioLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="15dp"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/fixedAspectRatio"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:text="Relación de aspecto" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <Switch
+                            android:id="@+id/fixedAspectRatioToggle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/AppTheme"
+                            android:layout_marginLeft="20dp"
+                            android:paddingLeft="50dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/aspectRatioXHeader"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="aspectRatioX ="
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/aspectRatioX"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="\u002010"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/aspectRatioXSeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/aspectRatioYHeader"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="aspectRatioY ="
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/aspectRatioY"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="\u002010"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/aspectRatioYSeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:progress="10" />
+
+                <LinearLayout
+                    android:id="@+id/showGuidelinesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/showGuidelines"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="Mostrar lineas guía : "
+                        android:layout_marginTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <Spinner
+                            android:id="@+id/showGuidelinesSpin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/showGuidelinesArray"
+                            android:gravity="left"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/Button_crop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Cortar"
+                    android:textColor="#fff"
+                    style="@style/AppTheme"
+                    android:background="?attr/colorAccent" />
+
+                <ImageView
+                    android:id="@+id/croppedImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:contentDescription="The cropped image."
+                    android:layout_marginTop="10dp" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <EditText
+                        android:id="@+id/editTextCrop"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="16dp"
+                        android:textAlignment="textEnd"
+                        android:hint="crop_imagen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name_png"
+                        android:text=".png"
+                        android:layout_toRightOf="@+id/editTextCrop"
+                        android:layout_alignParentBottom="false"
+                        android:layout_alignBottom="@+id/editTextCrop"
+                        android:layout_marginBottom="10dp" />
+
+                    <Button
+                        android:id="@+id/Button_save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Guardar"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignBottom="@+id/editTextCrop"
+                        style="@style/AppTheme"
+                        android:background="?attr/colorAccent"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/text_save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editTextCrop"
+                        android:layout_marginTop="10dp"
+                        android:text="* Renombra la imagen cortada para guardarla en formato .png (por defecto crop_imagen.png). \nLa imagen será guardada en la MemoriaInterna(sdCard)/HCTControl/Crop/."
+                        android:textSize="10dp"
+                        android:gravity="center_horizontal" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+

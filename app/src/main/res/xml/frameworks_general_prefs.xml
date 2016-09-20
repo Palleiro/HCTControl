@@ -18,6 +18,17 @@
             android:data="mydata" />
     </PreferenceScreen>
     <PreferenceScreen
+        android:icon="@drawable/ic_crop_image"
+        android:title="Crop Image"
+        android:summary="Recorta cualquier imagen y guardala en sdCard"
+        android:widgetLayout="@layout/round_more_icon" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.hctrom.romcontrol"
+            android:targetClass="com.hctrom.romcontrol.cropper.MainCropImageView"
+            android:data="mydata" />
+        </PreferenceScreen>
+    <PreferenceScreen
         android:icon="@drawable/ic_dpichanger"
         android:title="DPI Changer"
         android:summary="Cambia la densidad de la pantalla a tu gusto..."

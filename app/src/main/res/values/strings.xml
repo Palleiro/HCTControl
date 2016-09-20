@@ -962,4 +962,11 @@ Usando el comando \'revert\' puede restaurar dicho fichero.</string>
     <string name="reboot_required_dialog_message">Para que esta acción tenga efecto, es necesario reiniciar el dispositivo completamente. Desea reiniciar ahora?</string>
     <string name="reboot_later_negative_button">Más tarde</string>
     <string name="reboot_now_dialog_button">Reiniciar ahora</string>
+
+    <!-- Crop Image -->
+    <string-array name="showGuidelinesArray">
+        <item>Nunca</item>
+        <item>Al tocar</item>
+        <item>Siempre</item>
+    </string-array>
 </resources>
