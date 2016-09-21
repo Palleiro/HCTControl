@@ -38,7 +38,7 @@
 
 - HexConverter-v2.0: [Wubydax](https://github.com/wubydax/HexConverter-v2.0)
 
-- Cropper: [Hdodenhof](https://github.com/hdodenhof/cropper)
+- Cropper: [Edmodo](https://github.com/edmodo/cropper)
 
 ##### Dar las gracias en nombre del `HCTeam` a todos los desarrolladores arriba mencionados por compartir su código y poder hacer esto más grande...
 
