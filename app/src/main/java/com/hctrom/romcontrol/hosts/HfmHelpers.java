@@ -4,13 +4,14 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
-import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.util.TypedValue;
 import android.widget.TextView;
 
@@ -20,15 +21,17 @@ import com.hctrom.romcontrol.R;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 
 public final class HfmHelpers {
     private static final String TAG = "HfmHelpers";
-    private static FragmentActivity myContext;
 
     private HfmHelpers() {
         throw new AssertionError();
@@ -48,9 +51,7 @@ public final class HfmHelpers {
                     && areFilesDifferent(hosts, defHosts) && isOurHostsFile()) {
                 copyFiles(defHosts, hosts);
             }
-        }
-        catch(IOException e)
-        {
+        }catch(IOException e) {
             e.printStackTrace();
         }
     }

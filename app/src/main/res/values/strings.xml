@@ -533,7 +533,7 @@
     <string name="hfm_pref_screen_title">Ad blocker</string>
     <string name="hfm_update_hosts">Actualizar archivo hosts</string>
     <string name="hfm_update_hosts_summary">Descargar y aplicar hosts actualizado</string>
-    <string name="hfm_dialog_wait">Trabajando, por favor espere ...</string>
+    <string name="hfm_dialog_wait">Actualizando, por favor espere ...</string>
     <string name="hfm_dialog_failed">Fallo actualizando archivo host. Por favor, inténtalo de nuevo.</string>
     <string name="hfm_dialog_success">/4 fuentes hosts aplicadas con éxito!\n\nEn caso necesario, puede eliminar algún dominio en concreto de la lista de bloqueados.\n\nPara ello pulse en \"<b>ELIMINAR UN DOMINIO</b>\".\nDe lo contrario, pulse \"<b>FINALIZAR</b>\".\n\n</string>
     <string name="hfm_dialog_conn_error">Error: No hay conexión a internet. Por favor, compruebe la conexión e intentelo de nuevo.</string>

@@ -19,7 +19,7 @@ import com.hctrom.romcontrol.logcat.data.SearchCriteria;
 import com.hctrom.romcontrol.logcat.helper.PreferenceHelper;
 import com.hctrom.romcontrol.logcat.helper.SaveLogHelper;
 import com.hctrom.romcontrol.logcat.helper.ServiceHelper;
-import com.hctrom.romcontrol.logcat.helper.WidgetHelper;
+import com.hctrom.romcontrol.widget.WidgetHelper;
 import com.hctrom.romcontrol.logcat.reader.LogcatReader;
 import com.hctrom.romcontrol.logcat.reader.LogcatReaderLoader;
 import com.hctrom.romcontrol.logcat.util.ArrayUtil;

@@ -9,7 +9,7 @@ import com.hctrom.romcontrol.R;
 import com.hctrom.romcontrol.logcat.data.ColorScheme;
 import com.hctrom.romcontrol.logcat.util.StringUtil;
 import com.hctrom.romcontrol.logcat.util.UtilLogger;
-import com.hctrom.romcontrol.logcat.widget.MultipleChoicePreference;
+import com.hctrom.romcontrol.logcat.settings.MultipleChoicePreference;
 
 import java.util.ArrayList;
 import java.util.Arrays;

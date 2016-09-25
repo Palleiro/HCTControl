@@ -1,4 +1,4 @@
-package com.hctrom.romcontrol.logcat.widget;
+package com.hctrom.romcontrol.logcat.settings;
 
 import android.content.Context;
 import android.util.AttributeSet;

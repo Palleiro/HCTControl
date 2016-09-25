@@ -100,7 +100,7 @@
         <activity android:name=".cropper.MainCropImageView"
             android:theme="@style/AppTheme" />
 
-        <activity android:name=".logcat.helper.WidgetFlashlightDialogAlert"
+        <activity android:name=".widget.WidgetFlashlightDialogAlert"
             android:theme="@style/Theme.AppCompat.Translucent" />
 
         <activity android:name=".logcat.ShowRecordLogDialogActivity"
@@ -117,7 +117,7 @@
         <activity android:name=".logcat.SettingsActivity"
             android:theme="@style/AppTheme" />
 
-        <activity android:name=".logcat.helper.WidgetPower"
+        <activity android:name=".widget.WidgetPower"
             android:theme="@style/Theme.AppCompat.Translucent" />
 
         <receiver android:name=".logcat.RecordingWidgetProvider">
@@ -141,13 +141,13 @@
                 android:resource="@xml/widget_catlog_hct" />
         </receiver>
 
-        <receiver android:name=".logcat.helper.WidgetFlashlightReceiver">
+        <receiver android:name=".widget.WidgetFlashlightReceiver">
             <intent-filter>
                 <action android:name="COM_FLASHLIGHT"></action>
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".logcat.helper.WidgetBatteryReceiver">
+        <receiver android:name=".widget.WidgetBatteryReceiver">
             <intent-filter>
                 <action android:name="COM_BATTERY"></action>
             </intent-filter>

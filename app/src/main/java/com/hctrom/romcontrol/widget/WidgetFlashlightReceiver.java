@@ -1,4 +1,4 @@
-package com.hctrom.romcontrol.logcat.helper;
+package com.hctrom.romcontrol.widget;
 
 import android.appwidget.AppWidgetManager;
 import android.content.BroadcastReceiver;

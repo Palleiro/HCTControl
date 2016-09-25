@@ -15,7 +15,7 @@ import com.hctrom.romcontrol.R;
 import com.hctrom.romcontrol.logcat.data.FilterQueryWithLevel;
 import com.hctrom.romcontrol.logcat.helper.DialogHelper;
 import com.hctrom.romcontrol.logcat.helper.PreferenceHelper;
-import com.hctrom.romcontrol.logcat.helper.WidgetHelper;
+import com.hctrom.romcontrol.widget.WidgetHelper;
 import com.hctrom.romcontrol.logcat.util.Callback;
 
 import java.util.Arrays;

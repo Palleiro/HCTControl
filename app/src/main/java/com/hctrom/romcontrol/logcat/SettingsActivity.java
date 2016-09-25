@@ -25,8 +25,8 @@ import com.hctrom.romcontrol.logcat.helper.PackageHelper;
 import com.hctrom.romcontrol.logcat.helper.PreferenceHelper;
 import com.hctrom.romcontrol.logcat.util.ArrayUtil;
 import com.hctrom.romcontrol.logcat.util.StringUtil;
-import com.hctrom.romcontrol.logcat.widget.MockDisabledListPreference;
-import com.hctrom.romcontrol.logcat.widget.MultipleChoicePreference;
+import com.hctrom.romcontrol.logcat.settings.MockDisabledListPreference;
+import com.hctrom.romcontrol.logcat.settings.MultipleChoicePreference;
 
 import java.util.ArrayList;
 import java.util.List;

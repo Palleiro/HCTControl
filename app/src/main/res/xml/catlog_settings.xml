@@ -18,7 +18,8 @@
 			android:summary="@string/pref_show_timestamp_summary"
 			android:persistent="true" android:defaultValue="true"/>
 			
-		<com.hctrom.romcontrol.logcat.widget.MockDisabledListPreference android:key="@string/pref_theme"
+		<com.hctrom.romcontrol.logcat.settings.MockDisabledListPreference
+			android:key="@string/pref_theme"
 			android:title="@string/pref_theme_title" android:persistent="true"
 			android:entries="@array/pref_theme_choices_names" android:entryValues="@array/pref_theme_choices_values"
 			android:defaultValue="@string/pref_theme_choice_dark_value" />		
@@ -27,7 +28,8 @@
 	
 	<PreferenceCategory android:title="@string/pref_cat_configuration" android:layout="@layout/preferences_category" >
 	    		
-		<com.hctrom.romcontrol.logcat.widget.MultipleChoicePreference android:key="@string/pref_buffer"	
+		<com.hctrom.romcontrol.logcat.settings.MultipleChoicePreference
+			android:key="@string/pref_buffer"
 			android:title="@string/pref_buffer_title" android:persistent="true"
 			android:entries="@array/pref_buffer_choices" android:entryValues="@array/pref_buffer_choice_values"
 			android:defaultValue="@string/pref_buffer_choice_main_value" />	
@@ -40,13 +42,13 @@
 	</PreferenceCategory>
 	
 	<PreferenceCategory android:title="@string/pref_cat_advanced" android:layout="@layout/preferences_category" >
-		<com.hctrom.romcontrol.logcat.widget.NonnegativeIntegerEditTextPreference 
+		<com.hctrom.romcontrol.logcat.settings.NonnegativeIntegerEditTextPreference
 			android:key="@string/pref_log_line_period"
 			android:title="@string/pref_log_line_period_title"
 			android:summary="@string/pref_log_line_period_summary"
 			android:persistent="true" android:defaultValue="@string/pref_log_line_period_default"/>
 			
-		<com.hctrom.romcontrol.logcat.widget.NonnegativeIntegerEditTextPreference 
+		<com.hctrom.romcontrol.logcat.settings.NonnegativeIntegerEditTextPreference
 			android:key="@string/pref_display_limit"
 			android:title="@string/pref_display_limit_title"
 			android:summary="@string/pref_display_limit_summary"

@@ -1,4 +1,4 @@
-package com.hctrom.romcontrol.logcat.helper;
+package com.hctrom.romcontrol.widget;
 
 /**
  * Created by Palleiro on 18/04/2016.

@@ -1,4 +1,4 @@
-package com.hctrom.romcontrol.logcat.helper;
+package com.hctrom.romcontrol.widget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -15,6 +15,8 @@ import com.hctrom.romcontrol.MainViewActivity;
 import com.hctrom.romcontrol.R;
 import com.hctrom.romcontrol.logcat.LogcatRecordingService;
 import com.hctrom.romcontrol.logcat.RecordingWidgetProvider;
+import com.hctrom.romcontrol.logcat.helper.PreferenceHelper;
+import com.hctrom.romcontrol.logcat.helper.ServiceHelper;
 import com.hctrom.romcontrol.logcat.util.UtilLogger;
 
 public class WidgetHelper extends AppWidgetProvider {

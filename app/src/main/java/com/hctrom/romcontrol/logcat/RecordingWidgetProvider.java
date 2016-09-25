@@ -8,7 +8,7 @@ import android.content.Intent;
 import com.hctrom.romcontrol.logcat.helper.DialogHelper;
 import com.hctrom.romcontrol.logcat.helper.PreferenceHelper;
 import com.hctrom.romcontrol.logcat.helper.ServiceHelper;
-import com.hctrom.romcontrol.logcat.helper.WidgetHelper;
+import com.hctrom.romcontrol.widget.WidgetHelper;
 import com.hctrom.romcontrol.logcat.util.UtilLogger;
 
 public class RecordingWidgetProvider extends AppWidgetProvider {

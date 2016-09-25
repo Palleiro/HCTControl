@@ -94,7 +94,7 @@
             <intent
                 android:action="android.intent.action.MAIN"
                 android:targetPackage="com.hctrom.romcontrol"
-                android:targetClass="com.hctrom.romcontrol.HostWhiteListView"
+                android:targetClass="com.hctrom.romcontrol.hosts.HostWhiteListView"
                 android:data="mydata" />
         </PreferenceScreen>
     </PreferenceCategory>
