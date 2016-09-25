@@ -144,7 +144,7 @@
     <color name="android_theme_tag_color_01">#FF222222</color>
     <color name="android_theme_tag_color_02">#FF996666</color>
     <color name="android_theme_tag_color_03">#FFFFCC99</color>
-    <color name="android_theme_tag_color_04">#FFCC0000</color>
+    <color name="android_theme_tag_color_04">#cc0000</color>
     <color name="android_theme_tag_color_05">#FF666633</color>
     <color name="android_theme_tag_color_06">#FF990099</color>
     <color name="android_theme_tag_color_07">#FF006600</color>

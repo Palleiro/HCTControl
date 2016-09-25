@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AppTheme"
+    android:background="@color/statusbar_widget">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AppTheme"
+        android:background="@drawable/dialog_bg_hct"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <Chronometer
+            android:id="@+id/simpleChronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AppTheme"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:textColor="#efffffff"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_security_flash"
+            style="@style/AppTheme"
+            android:layout_below="@+id/simpleChronometer"
+            android:gravity="center_horizontal"
+            android:textColor="#fff"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/off_flash"
+            android:layout_below="@+id/text_security_flash"
+            android:text="APAGAR\nLinterna"
+            android:textColor="#fff"
+            android:background="@color/myAccentColorHCT"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+            android:id="@+id/lnTempFlash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:layout_below="@+id/off_flash">
+
+            <TextView
+                android:id="@+id/textTempFlash"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Tiempo máx. encendida : "
+                android:layout_marginTop="5dp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Spinner
+                    android:id="@+id/temp_flash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/tempFlash"
+                    android:gravity="left"
+                    android:layout_marginTop="4dp"
+                    style="@style/AppThemeHCT"
+                    android:elevation="1dp"
+                    android:background="@drawable/abc_spinner_textfield_background_material" />
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lnTempFlash"
+            style="@style/AppTheme" >
+            <CheckBox
+                android:text="No volver a mostrar este diálogo.\n(podrá encender y apagar la linterna directamente desde el toggle del widget)"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:id="@+id/checkBoxFlash"
+                android:textSize="10sp"
+                android:layout_width="240dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

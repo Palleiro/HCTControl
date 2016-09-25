@@ -28,7 +28,7 @@ public class WidgetBatteryReceiver extends BroadcastReceiver {
 
         Intent receiver = new Intent(context, WidgetBatteryReceiver.class);
         receiver.setAction("COM_BATTERY");
-        Toast.makeText(context, "¡¡ Actualizado !!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "¡¡ Actualizado estado Batería Widget !!", Toast.LENGTH_SHORT).show();
 
         float  temp   = ((float) intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE,0)) / 10;
         String st = String.valueOf(temp);

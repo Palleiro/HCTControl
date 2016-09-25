@@ -100,6 +100,9 @@
         <activity android:name=".cropper.MainCropImageView"
             android:theme="@style/AppTheme" />
 
+        <activity android:name=".logcat.helper.WidgetFlashlightDialogAlert"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+
         <activity android:name=".logcat.ShowRecordLogDialogActivity"
             android:theme="@style/AppTheme" />
 

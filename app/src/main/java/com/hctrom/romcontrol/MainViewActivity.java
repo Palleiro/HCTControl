@@ -28,6 +28,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -77,6 +78,7 @@ public class MainViewActivity extends AppCompatActivity
     int[] ids_text;
     private File sddir;
     private File bkpdir;
+    private static FragmentActivity myContext;
     ActionButton[] rebootFabs;
     TextView[] rebootFabs_text;
     ActionButton reboot, hotboot, recovery, bl, ui, lch, incall, menu;

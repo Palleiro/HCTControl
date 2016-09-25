@@ -772,4 +772,13 @@ Oct/16/2014"</item>
         <item>@color/android_theme_tag_color_16</item>
         <item>@color/android_theme_tag_color_17</item>
     </integer-array>
+
+    <string-array name="tempFlash">
+        <item>1 (valor por defecto)</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>8</item>
+        <item>10</item>
+    </string-array>
 </resources>

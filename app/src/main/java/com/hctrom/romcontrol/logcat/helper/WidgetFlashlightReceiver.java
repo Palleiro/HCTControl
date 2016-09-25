@@ -6,6 +6,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.Camera;
+import android.preference.PreferenceManager;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
@@ -15,20 +16,30 @@ import com.hctrom.romcontrol.logcat.RecordingWidgetProvider;
 /**
  * Created by Palleiro on 18/09/2016.
  */
+
 public class WidgetFlashlightReceiver extends BroadcastReceiver {
-    private static boolean isLightOn = false;
+    static boolean isLightOn = false;
     private static Camera camera;
 
     @Override
     public void onReceive(Context context, Intent intent) {
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_catlog_hctcontrol);
 
-        if(isLightOn) {
+        if (PreferenceManager.getDefaultSharedPreferences(context).getInt("aviso_temp_flash", 0) == 0) {
+            Intent i = new Intent(context.getApplicationContext(), WidgetFlashlightDialogAlert.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(i);
+            Toast.makeText(context, "¡¡ Linterna Activada !!", Toast.LENGTH_LONG).show();
             views.setImageViewResource(R.id.buttonTorch, R.drawable.widget_torch_off);
-            Toast.makeText(context, "¡¡ Linterna\nDesactivada !!", Toast.LENGTH_SHORT).show();
-        } else {
-            views.setImageViewResource(R.id.buttonTorch, R.drawable.widget_torch_on);
-            Toast.makeText(context, "¡¡ Linterna\nActivada !!", Toast.LENGTH_LONG).show();
+            isLightOn = false;
+        }else{
+            if(isLightOn) {
+                views.setImageViewResource(R.id.buttonTorch, R.drawable.widget_torch_off);
+                Toast.makeText(context, "¡¡ Linterna Desactivada !!", Toast.LENGTH_SHORT).show();
+            }else {
+                views.setImageViewResource(R.id.buttonTorch, R.drawable.widget_torch_on);
+                Toast.makeText(context, "¡¡ Linterna Activada !!", Toast.LENGTH_SHORT).show();
+            }
         }
 
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
