@@ -96,22 +96,22 @@ public class WidgetFlashlightDialogAlert extends AppCompatActivity {
         tempFlashSpinner.setAdapter(spinnerArrayAdapter);
         String t = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("temp_flash", "01:00");
         if (t == "01:00"){
-            tempFlashSpinner.setSelection(1);
+            tempFlashSpinner.setSelection(0);
         }
         if (t == "02:00"){
-            tempFlashSpinner.setSelection(2);
+            tempFlashSpinner.setSelection(1);
         }
         if (t == "03:00"){
-            tempFlashSpinner.setSelection(3);
+            tempFlashSpinner.setSelection(2);
         }
         if (t == "05:00"){
-            tempFlashSpinner.setSelection(4);
+            tempFlashSpinner.setSelection(3);
         }
         if (t == "08:00"){
-            tempFlashSpinner.setSelection(5);
+            tempFlashSpinner.setSelection(4);
         }
         if (t == "10:00"){
-            tempFlashSpinner.setSelection(6);
+            tempFlashSpinner.setSelection(5);
         }
         // Sets up the Spinner
         tempFlashSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
