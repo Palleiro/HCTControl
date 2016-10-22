@@ -62,6 +62,7 @@ public class LicenseMain extends AppCompatActivity {
     licenses.add(Licenses.fromGitHub("wubydax/HexConverter-v2.0", Licenses.LICENSE_APACHE_V2));
     licenses.add(Licenses.fromGitHub("nisrulz/packagehunter", Licenses.LICENSE_APACHE_V2));
     licenses.add(Licenses.fromGitHub("edmodo/cropper", Licenses.LICENSE_APACHE_V2));
+    licenses.add(Licenses.fromGitHub("flavioarfaria/KenBurnsView", Licenses.LICENSE_APACHE_V2));
 
     LicenseAdapter adapter = new LicenseAdapter(licenses);
     RecyclerView list = (RecyclerView) findViewById(R.id.list);
