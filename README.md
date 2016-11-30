@@ -42,6 +42,8 @@
 
 - KenBurnsView: [Flavioarfaria](https://github.com/flavioarfaria/KenBurnsView)
 
+- Passcodeview: [Arjun-sna](https://github.com/Arjun-sna/android-passcodeview)
+
 ##### Dar las gracias en nombre del `HCTeam` a todos los desarrolladores arriba mencionados por compartir su código y poder hacer esto más grande...
 
 ### ● Capturas
