@@ -23,6 +23,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.hctrom.romcontrol.kenburnsview.KenBurnsView;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -69,6 +71,7 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
     private TypedValue typedValue;
     private TextView editTextNombre;
     CircleImageView circleImageView;
+    KenBurnsView backgrounNav;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -97,8 +100,33 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
         view = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
         editTextNombre = ( TextView) view.findViewById(R.id.editTextPersonalizado);
         circleImageView = (CircleImageView) view.findViewById(R.id.profile_image);
-        final File file = new File(getActivity().getFilesDir().getPath() + "/imagen_perfil_hctcontrol.jpg");
+        backgrounNav = (KenBurnsView) view.findViewById(R.id.background_nav);
         SharedPreferences prefs = getActivity().getSharedPreferences("DatosLogin", Context.MODE_PRIVATE);
+        if (prefs.getBoolean("check_image_background_mov", true)){
+            backgrounNav.resume();
+        }else{
+            backgrounNav.pause();
+        }
+        final File file = new File(getActivity().getFilesDir().getPath() + "/imagen_perfil_hctcontrol.jpg");
+        final File fileBackgrounVav = new File(getActivity().getFilesDir().getPath() + "/header_image.jpg");
+        if (fileBackgrounVav.exists()){
+            if (prefs.getBoolean("check_image_background", true)){
+                Bitmap bitmap = null;
+
+                try{
+                    FileInputStream fileInputStream = new FileInputStream(getActivity().getFilesDir().getPath()+ "/header_image.jpg");
+                    bitmap = BitmapFactory.decodeStream(fileInputStream);
+                }catch (IOException io){
+                    io.printStackTrace();
+                }
+                backgrounNav.setImageBitmap(bitmap);
+            }else{
+                //backgrounNav.setImageResource(R.drawable.header_image);
+            }
+        }else{
+            //backgrounNav.setImageResource(R.drawable.header_image);
+        }
+
         if (file.exists()){
             if (prefs.getBoolean("check_image_profile", true)){
                 Bitmap bitmap = null;

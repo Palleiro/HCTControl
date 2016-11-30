@@ -21,20 +21,22 @@
 package com.hctrom.romcontrol.fastergps.util;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.preference.PreferenceManager;
+import android.content.res.Resources;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.appcompat.BuildConfig;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.stericson.RootTools.RootTools;
 import com.hctrom.romcontrol.R;
+import com.hctrom.romcontrol.ThemeSelectorUtility;
 import com.hctrom.romcontrol.fastergps.rootcommands.Shell;
 import com.hctrom.romcontrol.fastergps.rootcommands.Toolbox;
+import com.stericson.RootTools.RootTools;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -97,16 +99,14 @@ public class Utils {
                     dialog.show();
 
                     Button neutral_button = dialog.getButton(DialogInterface.BUTTON_NEUTRAL);
-                    if (PreferenceManager.getDefaultSharedPreferences(activity).getInt("theme_prefs", 0) == 3) {
-                        dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
-                        neutral_button.setTextColor(activity.getResources().getColor(R.color.color_iconos_samsung_light));
-                    }else if (PreferenceManager.getDefaultSharedPreferences(activity).getInt("theme_prefs", 0) == 0){
-                        dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
-                        neutral_button.setTextColor(activity.getResources().getColor(R.color.myAccentColorHCT));
-                    }else {
-                        dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark_light);
-                        neutral_button.setTextColor(activity.getResources().getColor(R.color.myAccentColor));
-                    }
+                    TypedValue typedValue2 = new TypedValue();
+                    Resources.Theme theme2 = activity.getTheme();
+                    theme2.resolveAttribute(R.attr.colorPrimaryDark, typedValue2, true);
+                    int color2 = typedValue2.data;
+
+                    neutral_button.setTextColor(color2);
+
+                    ThemeSelectorUtility.ThemeDrawableBG(dialog, activity);
                 } else {
                     rootAvailable = true;
                 }

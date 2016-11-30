@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainViewActivity">
+    <!--
     <group android:checkableBehavior="all" android:id="@+id/menu" >
         <item
             android:id="@+id/option1"
@@ -14,6 +15,14 @@
             android:orderInCategory="100"
             android:title="Mostrar Menú flotante"
             android:checked="true">
+        </item>
+    </group>
+    -->
+    <group android:checkableBehavior="none" android:id="@+id/menu_config" >
+        <item
+            android:id="@+id/option_hctcontrol"
+            android:orderInCategory="100"
+            android:title="Opciones HCTControl" >
         </item>
     </group>
     <item

@@ -3,16 +3,17 @@ package com.hctrom.romcontrol.cropper;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -82,13 +83,11 @@ public class MainCropImageView extends AppCompatActivity {
         ThemeSelectorUtility theme = new ThemeSelectorUtility(this);
         theme.onActivityCreateSetTheme(this);
         setContentView(R.layout.crop_image_view_activity_main);
-        if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 3) {
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
-        }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 0){
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));
-        }else{
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColor));
-        }
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme1 = getTheme();
+        theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+        int color = typedValue.data;
+        getWindow().setStatusBarColor(color);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
         setSupportActionBar(toolbar);

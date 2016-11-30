@@ -40,6 +40,8 @@
 
 - Cropper: [Edmodo](https://github.com/edmodo/cropper)
 
+- KenBurnsView: [Flavioarfaria](https://github.com/flavioarfaria/KenBurnsView)
+
 ##### Dar las gracias en nombre del `HCTeam` a todos los desarrolladores arriba mencionados por compartir su código y poder hacer esto más grande...
 
 ### ● Capturas

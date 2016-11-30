@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="SEGURIDAD" >
+        <SwitchPreference
+            android:title="PIN de seguridad para acceder a HCTControl"
+            android:key="pass_check"
+            android:summaryOn="Activado"
+            android:summaryOff="Desactivado" />
+        <PreferenceScreen
+            android:widgetLayout="@layout/round_more_icon"
+            android:title="Cambiar PIN de seguridad"
+            android:key="pass_reset"
+            android:dependency="pass_check" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.hctrom.romcontrol"
+                android:targetClass="com.hctrom.romcontrol.passcodeview.PassCodeMain"
+                android:data="mydata" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Aviso Backup HCTControl" >
+        <SwitchPreference
+            android:title="Mostrar diálogo inicio recordando hacer una copia de seguridad"
+            android:key="show_backup"
+            android:summaryOn="Mostrar"
+            android:summaryOff="NO mostrar" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Menú flotante" >
+        <SwitchPreference
+            android:title="Mostrar botón flotante para acceder al Menú lateral"
+            android:key="menu_show"
+            android:summaryOn="Mostrando"
+            android:summaryOff="Ocultado" />
+        <SwitchPreference
+            android:title="Activar botón Menú flotante"
+            android:key="menu_activate"
+            android:summaryOn="Activado"
+            android:summaryOff="Desactivado"
+            android:dependency="menu_show"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Perfil" >
+        <PreferenceScreen
+            android:widgetLayout="@layout/round_more_icon"
+            android:title="Personalizar cabecera de HCTControl"
+            android:summary="Personalizar nombre, imagen de perfil y fondo cabecera del menú lateral de HCTControl" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.hctrom.romcontrol"
+                android:targetClass="com.hctrom.romcontrol.ImagenPerfil"
+                android:data="mydata" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -3,10 +3,12 @@ package com.hctrom.romcontrol.hosts;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -40,13 +42,12 @@ public class HostWhiteListView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ThemeSelectorUtility theme = new ThemeSelectorUtility(this);
         theme.onActivityCreateSetTheme(this);
-        if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 3) {
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
-        }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 0){
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));
-        }else{
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColor));
-        }
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme1 = getTheme();
+        theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+        int color = typedValue.data;
+        getWindow().setStatusBarColor(color);
+		
         setContentView(R.layout.host_white_listview);
         // Initializing Toolbar and setting it as the actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);

@@ -69,6 +69,10 @@
             android:theme="@style/AppTheme" >
         </activity>
         <activity
+            android:name=".passcodeview.PassCodeMain"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
             android:name=".ImagenPerfil"
             android:theme="@style/AppTheme" >
         </activity>

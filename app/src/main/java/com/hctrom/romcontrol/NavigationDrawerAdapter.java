@@ -57,19 +57,19 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                                                    @Override
                                                    public void onClick(View v) {
-                                                       if (mSelectedView != null) {
-                                                           mSelectedView.setSelected(false);
+               if (mSelectedView != null) {
+                   mSelectedView.setSelected(false);
 
-                                                       }
-                                                       mSelectedPosition = viewHolder.getPosition();
-                                                       v.setSelected(true);
-                                                       mSelectedView = v;
-                                                        //Creating communication between the adapter and the fragment and the activity, using callback interface
-                                                       //Otherwise we cannot access the onItemClickListener from the activity
-                                                       if (mNavigationDrawerCallbacks != null)
-                                                           mNavigationDrawerCallbacks.onNavigationDrawerItemSelected(viewHolder.getPosition());
-                                                   }
-                                               }
+               }
+               mSelectedPosition = viewHolder.getPosition();
+               v.setSelected(true);
+               mSelectedView = v;
+                //Creating communication between the adapter and the fragment and the activity, using callback interface
+               //Otherwise we cannot access the onItemClickListener from the activity
+               if (mNavigationDrawerCallbacks != null)
+                   mNavigationDrawerCallbacks.onNavigationDrawerItemSelected(viewHolder.getPosition());
+           }
+       }
         );
 
         //Creating a choice for the overlay colors for the selected menu item, using attr, which differentiates between different themes and colors in them

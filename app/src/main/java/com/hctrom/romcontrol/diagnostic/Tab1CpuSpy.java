@@ -5,12 +5,13 @@ package com.hctrom.romcontrol.diagnostic;
  */
 
 import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -227,13 +228,11 @@ public class Tab1CpuSpy extends Fragment {
         TextView perText = (TextView)theRow.findViewById(
                 R.id.ui_percentage_text);
         ProgressBar bar = (ProgressBar)theRow.findViewById(R.id.ui_bar);
-        if (PreferenceManager.getDefaultSharedPreferences(_app.getApplicationContext()).getInt("theme_prefs", 0) == 3) {
-            bar.setProgressTintList(ColorStateList.valueOf(_app.getApplicationContext().getResources().getColor(R.color.myAccentColorSamsungLight)));
-        }else if (PreferenceManager.getDefaultSharedPreferences(_app.getApplicationContext()).getInt("theme_prefs", 0) == 0){
-            bar.setProgressTintList(ColorStateList.valueOf(_app.getApplicationContext().getResources().getColor(R.color.myAccentColorHCT)));
-        }else{
-            bar.setProgressTintList(ColorStateList.valueOf(_app.getApplicationContext().getResources().getColor(R.color.myAccentColor)));
-        }
+
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme = getActivity().getTheme();
+        theme.resolveAttribute(R.attr.colorAccent, typedValue, true);
+        bar.setProgressTintList(ColorStateList.valueOf(typedValue.data));
 
         // modify the row
         freqText.setText(sFreq);

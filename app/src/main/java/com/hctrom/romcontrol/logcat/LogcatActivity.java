@@ -7,12 +7,12 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatCallback;
 import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.view.ActionMode;
@@ -132,13 +132,12 @@ public class LogcatActivity extends ListActivity implements TextWatcher, OnScrol
         super.onCreate(savedInstanceState);
         ThemeSelectorUtility theme = new ThemeSelectorUtility(this);
         theme.onActivityCreateSetTheme(this);
-        if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 3) {
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
-        }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 0){
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));
-        }else{
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColor));
-        }
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme1 = getTheme();
+        theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+        int color = typedValue.data;
+        getWindow().setStatusBarColor(color);
+		
         AppCompatCallback callback = new AppCompatCallback() {
             @Override
             public void onSupportActionModeStarted(ActionMode actionMode) {

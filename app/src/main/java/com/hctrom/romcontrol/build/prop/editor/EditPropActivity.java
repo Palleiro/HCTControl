@@ -5,9 +5,9 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatCallback;
 import android.support.v7.app.AppCompatDelegate;
@@ -15,6 +15,7 @@ import android.support.v7.view.ActionMode;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -54,13 +55,11 @@ public class EditPropActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		ThemeSelectorUtility theme = new ThemeSelectorUtility(this);
 		theme.onActivityCreateSetTheme(this);
-		if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 3) {
-			getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
-		}else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 0){
-			getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));
-		}else{
-			getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColor));
-		}
+		TypedValue typedValue = new TypedValue();
+        Resources.Theme theme1 = getTheme();
+        theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+        int color = typedValue.data;
+        getWindow().setStatusBarColor(color);
 		AppCompatCallback callback = new AppCompatCallback() {
 			@Override
 			public void onSupportActionModeStarted(ActionMode actionMode) {
@@ -212,19 +211,15 @@ public class EditPropActivity extends Activity {
 
 				Button positive_button = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
 				Button negative_button = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
-				if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 3) {
-					dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
-					positive_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
-					negative_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
-				}else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 0){
-					dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
-					positive_button.setTextColor(getResources().getColor(R.color.myAccentColorHCT));
-					negative_button.setTextColor(getResources().getColor(R.color.myAccentColorHCT));
-				}else {
-					dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark_light);
-					positive_button.setTextColor(getResources().getColor(R.color.myAccentColor));
-					negative_button.setTextColor(getResources().getColor(R.color.myAccentColor));
-				}
+				TypedValue typedValue2 = new TypedValue();
+				Resources.Theme theme2 = getTheme();
+				theme2.resolveAttribute(R.attr.colorPrimaryDark, typedValue2, true);
+				int color2 = typedValue2.data;
+
+				positive_button.setTextColor(color2);
+				negative_button.setTextColor(color2);
+
+				ThemeSelectorUtility.ThemeDrawableBG(dialog, getApplicationContext());
     			break;
     		case R.id.discart_menu:
     			cancel();

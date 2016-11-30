@@ -7,12 +7,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -55,13 +56,12 @@ public class SortActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ThemeSelectorUtility theme = new ThemeSelectorUtility(this);
         theme.onActivityCreateSetTheme(this);
-        if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 3) {
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
-        }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 0){
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));
-        }else{
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColor));
-        }
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme1 = getTheme();
+        theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+        int color = typedValue.data;
+        getWindow().setStatusBarColor(color);
+		
         // inflate the view, stash the app build_prop_context, and get all UI elements
         setContentView(R.layout.toolbox_activity_sort);
         // Initializing Toolbar and setting it as the actionbar

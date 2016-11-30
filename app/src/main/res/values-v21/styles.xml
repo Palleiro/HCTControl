@@ -24,6 +24,285 @@
         <item name="item_color_selector">@color/color_selector</item>
         <item name="text_mail">@color/back_text_mail</item>
     </style>
+
+    <!-- Themes Dark -->
+
+    <style name="AppThemeTomato" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColorTomatoDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorTomatoDark</item>
+        <item name="colorAccent">@color/myAccentColorTomato</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_tomato</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image</item>
+        <item name="android:windowBackground">@color/myInverseColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
+        <item name="myAccentColor">@color/myAccentColorTomato</item>
+        <item name="myAccentColorIcons">@color/myTextPrimaryColor</item>
+        <item name="mynewColor">@color/myPrimaryColorTomatoDark</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail_tomato</item>
+    </style>
+    <style name="AppThemeTangerine" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColorTangerineDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorTangerineDark</item>
+        <item name="colorAccent">@color/myAccentColorTangerine</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_tangerine</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image</item>
+        <item name="android:windowBackground">@color/myInverseColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
+        <item name="myAccentColor">@color/myAccentColorTangerine</item>
+        <item name="myAccentColorIcons">@color/myTextPrimaryColor</item>
+        <item name="mynewColor">@color/myPrimaryColorTangerineDark</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail_tangerine</item>
+    </style>
+    <style name="AppThemeBanana" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColorBananaDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorBananaDark</item>
+        <item name="colorAccent">@color/myAccentColorBanana</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_banana</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image</item>
+        <item name="android:windowBackground">@color/myInverseColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
+        <item name="myAccentColor">@color/myAccentColorBanana</item>
+        <item name="myAccentColorIcons">@color/myTextPrimaryColor</item>
+        <item name="mynewColor">@color/myPrimaryColorBananaDark</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail_banana</item>
+    </style>
+    <style name="AppThemeBasil" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColorBasilDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorBasilDark</item>
+        <item name="colorAccent">@color/myAccentColorBasil</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_basil</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image</item>
+        <item name="android:windowBackground">@color/myInverseColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
+        <item name="myAccentColor">@color/myAccentColorBasil</item>
+        <item name="myAccentColorIcons">@color/myTextPrimaryColor</item>
+        <item name="mynewColor">@color/myPrimaryColorBasilDark</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail_basil</item>
+    </style>
+    <style name="AppThemeSage" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColorSageDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorSageDark</item>
+        <item name="colorAccent">@color/myAccentColorSage</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_sage</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowBackground">@color/myInverseColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
+        <item name="myAccentColor">@color/myAccentColorSage</item>
+        <item name="myAccentColorIcons">@color/myAccentColorSage</item>
+        <item name="mynewColor">@color/myPrimaryColorSageDark</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail_sage</item>
+    </style>
+    <style name="AppThemePeacock" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColorPeacockDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorPeacockDark</item>
+        <item name="colorAccent">@color/myAccentColorPeacock</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_peacock</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowBackground">@color/myInverseColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
+        <item name="myAccentColor">@color/myAccentColorPeacock</item>
+        <item name="myAccentColorIcons">@color/myAccentColorPeacock</item>
+        <item name="mynewColor">@color/myPrimaryColorPeacockDark</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail_peacock</item>
+    </style>
+    <style name="AppThemeBlueberry" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColorBlueberryDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorBlueberryDark</item>
+        <item name="colorAccent">@color/myAccentColorBlueberry</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_blueberry</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowBackground">@color/myInverseColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
+        <item name="myAccentColor">@color/myAccentColorBlueberry</item>
+        <item name="myAccentColorIcons">@color/myAccentColorBlueberry</item>
+        <item name="mynewColor">@color/myPrimaryColorBlueberryDark</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail_blueberry</item>
+    </style>
+    <style name="AppThemeLavender" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColorLavenderDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorLavenderDark</item>
+        <item name="colorAccent">@color/myAccentColorLavender</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_lavender</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowBackground">@color/myInverseColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
+        <item name="myAccentColor">@color/myAccentColorLavender</item>
+        <item name="myAccentColorIcons">@color/myAccentColorLavender</item>
+        <item name="mynewColor">@color/myPrimaryColorLavenderDark</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail_lavender</item>
+    </style>
+    <style name="AppThemeGrape" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColorGrapeDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorGrapeDark</item>
+        <item name="colorAccent">@color/myAccentColorGrape</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_grape</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowBackground">@color/myInverseColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
+        <item name="myAccentColor">@color/myAccentColorGrape</item>
+        <item name="myAccentColorIcons">@color/myAccentColorGrape</item>
+        <item name="mynewColor">@color/myPrimaryColorGrapeDark</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail_grape</item>
+    </style>
+    <style name="AppThemeFlamingo" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColorFlamingoDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorFlamingoDark</item>
+        <item name="colorAccent">@color/myAccentColorFlamingo</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_flamingo</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowBackground">@color/myInverseColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
+        <item name="myAccentColor">@color/myAccentColorFlamingo</item>
+        <item name="myAccentColorIcons">@color/myAccentColorFlamingo</item>
+        <item name="mynewColor">@color/myPrimaryColorFlamingoDark</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail_flamingo</item>
+    </style>
+    <style name="AppThemeGraphite" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColorGraphiteDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorGraphiteDark</item>
+        <item name="colorAccent">@color/myAccentColorGraphite</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_graphite</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowBackground">@color/myInverseColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
+        <item name="myAccentColor">@color/myAccentColorGraphite</item>
+        <item name="myAccentColorIcons">@color/myAccentColorGraphite</item>
+        <item name="mynewColor">@color/myPrimaryColorGraphiteDark</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail_graphite</item>
+    </style>
+    <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColor</item>
+        <item name="colorPrimaryDark">@color/myPrimaryDarkColor</item>
+        <item name="colorAccent">@color/myAccentColor</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image</item>
+        <item name="android:windowBackground">@color/myInverseColor</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColor</item>
+        <item name="myAccentColor">@color/myAccentColor</item>
+        <item name="myAccentColorIcons">@color/myAccentColor</item>
+        <item name="mynewColor">@color/myPrimaryColor</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail</item>
+    </style>
     <style name="AppThemeHCT" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/myPrimaryColorHCT</item>
@@ -124,5 +403,305 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">3dp</item>
         <item name="android:background">?attr/nav_drawer_bg_color</item>
+    </style>
+    <style name="Light_UI" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="nav_drawer_bg_color">#fff</item>
+        <item name="circle_anim_color">#ffffffff</item>
+    </style>
+
+    <!-- Themes Light -->
+
+    <style name="AppThemeTomatoLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="nav_drawer_bg_color">#fff</item>
+        <item name="circle_anim_color">#ffffffff</item>
+        <item name="colorPrimary">@color/myPrimaryColorTomatoDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorTomatoDark</item>
+        <item name="colorAccent">@color/myAccentColorTomato</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_tomato_light</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="myAccentColor">@color/myAccentColorTomato</item>
+        <item name="myAccentColorIcons">@color/myTextPrimaryColor</item>
+        <item name="mynewColor">@color/myPrimaryColorTomatoDark</item>
+        <item name="item_color_selector">@color/color_selector_light</item>
+        <item name="text_mail">@color/back_text_mail_tomato</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="AppThemeTangerineLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="nav_drawer_bg_color">#fff</item>
+        <item name="circle_anim_color">#ffffffff</item>
+        <item name="colorPrimary">@color/myPrimaryColorTangerineDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorTangerineDark</item>
+        <item name="colorAccent">@color/myAccentColorTangerine</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_tangerine_light</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="myAccentColor">@color/myAccentColorTangerine</item>
+        <item name="myAccentColorIcons">@color/myTextPrimaryColor</item>
+        <item name="mynewColor">@color/myPrimaryColorTangerineDark</item>
+        <item name="item_color_selector">@color/color_selector_light</item>
+        <item name="text_mail">@color/back_text_mail_tangerine</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="AppThemeBananaLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="nav_drawer_bg_color">#fff</item>
+        <item name="circle_anim_color">#ffffffff</item>
+        <item name="colorPrimary">@color/myPrimaryColorBananaDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorBananaDark</item>
+        <item name="colorAccent">@color/myAccentColorBanana</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_banana_light</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="myAccentColor">@color/myAccentColorBanana</item>
+        <item name="myAccentColorIcons">@color/myTextPrimaryColor</item>
+        <item name="mynewColor">@color/myPrimaryColorBananaDark</item>
+        <item name="item_color_selector">@color/color_selector_light</item>
+        <item name="text_mail">@color/back_text_mail_banana</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="AppThemeBasilLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="nav_drawer_bg_color">#fff</item>
+        <item name="circle_anim_color">#ffffffff</item>
+        <item name="colorPrimary">@color/myPrimaryColorBasilDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorBasilDark</item>
+        <item name="colorAccent">@color/myAccentColorBasil</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_basil_light</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="myAccentColor">@color/myAccentColorBasil</item>
+        <item name="myAccentColorIcons">@color/myTextPrimaryColor</item>
+        <item name="mynewColor">@color/myPrimaryColorBasilDark</item>
+        <item name="item_color_selector">@color/color_selector_light</item>
+        <item name="text_mail">@color/back_text_mail_basil</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="AppThemeSageLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="nav_drawer_bg_color">#fff</item>
+        <item name="circle_anim_color">#ffffffff</item>
+        <item name="colorPrimary">@color/myPrimaryColorSageDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorSageDark</item>
+        <item name="colorAccent">@color/myAccentColorSage</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_sage_light</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="myAccentColor">@color/myAccentColorSage</item>
+        <item name="myAccentColorIcons">@color/myAccentColorSage</item>
+        <item name="mynewColor">@color/myPrimaryColorSageDark</item>
+        <item name="item_color_selector">@color/color_selector_light</item>
+        <item name="text_mail">@color/back_text_mail_sage</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="AppThemePeacockLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="nav_drawer_bg_color">#fff</item>
+        <item name="circle_anim_color">#ffffffff</item>
+        <item name="colorPrimary">@color/myPrimaryColorPeacockDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorPeacockDark</item>
+        <item name="colorAccent">@color/myAccentColorPeacock</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_peacock_light</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="myAccentColor">@color/myAccentColorPeacock</item>
+        <item name="myAccentColorIcons">@color/myAccentColorPeacock</item>
+        <item name="mynewColor">@color/myPrimaryColorPeacockDark</item>
+        <item name="item_color_selector">@color/color_selector_light</item>
+        <item name="text_mail">@color/back_text_mail_peacock</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="AppThemeBlueberryLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="nav_drawer_bg_color">#fff</item>
+        <item name="circle_anim_color">#ffffffff</item>
+        <item name="colorPrimary">@color/myPrimaryColorBlueberryDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorBlueberryDark</item>
+        <item name="colorAccent">@color/myAccentColorBlueberry</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_blueberry_light</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="myAccentColor">@color/myAccentColorBlueberry</item>
+        <item name="myAccentColorIcons">@color/myAccentColorBlueberry</item>
+        <item name="mynewColor">@color/myPrimaryColorBlueberryDark</item>
+        <item name="item_color_selector">@color/color_selector_light</item>
+        <item name="text_mail">@color/back_text_mail_blueberry</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="AppThemeLavenderLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="nav_drawer_bg_color">#fff</item>
+        <item name="circle_anim_color">#ffffffff</item>
+        <item name="colorPrimary">@color/myPrimaryColorLavenderDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorLavenderDark</item>
+        <item name="colorAccent">@color/myAccentColorLavender</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_lavender_light</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="myAccentColor">@color/myAccentColorLavender</item>
+        <item name="myAccentColorIcons">@color/myAccentColorLavender</item>
+        <item name="mynewColor">@color/myPrimaryColorLavenderDark</item>
+        <item name="item_color_selector">@color/color_selector_light</item>
+        <item name="text_mail">@color/back_text_mail_lavender</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="AppThemeGrapeLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="nav_drawer_bg_color">#fff</item>
+        <item name="circle_anim_color">#ffffffff</item>
+        <item name="colorPrimary">@color/myPrimaryColorGrapeDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorGrapeDark</item>
+        <item name="colorAccent">@color/myAccentColorGrape</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_grape_light</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="myAccentColor">@color/myAccentColorGrape</item>
+        <item name="myAccentColorIcons">@color/myAccentColorGrape</item>
+        <item name="mynewColor">@color/myPrimaryColorGrapeDark</item>
+        <item name="item_color_selector">@color/color_selector_light</item>
+        <item name="text_mail">@color/back_text_mail_grape</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="AppThemeFlamingoLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="nav_drawer_bg_color">#fff</item>
+        <item name="circle_anim_color">#ffffffff</item>
+        <item name="colorPrimary">@color/myPrimaryColorFlamingoDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorFlamingoDark</item>
+        <item name="colorAccent">@color/myAccentColorFlamingo</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_flamingo_light</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="myAccentColor">@color/myAccentColorFlamingo</item>
+        <item name="myAccentColorIcons">@color/myAccentColorFlamingo</item>
+        <item name="mynewColor">@color/myPrimaryColorFlamingoDark</item>
+        <item name="item_color_selector">@color/color_selector_light</item>
+        <item name="text_mail">@color/back_text_mail_flamingo</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="AppThemeGraphiteLight" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
+        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="android:windowBackground">@color/myWindowBackground</item>
+        <item name="navitextcolor">#000000</item>
+        <item name="nav_drawer_bg_color">#fff</item>
+        <item name="circle_anim_color">#ffffffff</item>
+        <item name="colorPrimary">@color/myPrimaryColorGraphiteDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryColorGraphiteDark</item>
+        <item name="colorAccent">@color/myAccentColorGraphite</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_graphite_light</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_hct</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="myAccentColor">@color/myAccentColorGraphite</item>
+        <item name="myAccentColorIcons">@color/myAccentColorGraphite</item>
+        <item name="mynewColor">@color/myPrimaryColorGraphiteDark</item>
+        <item name="item_color_selector">@color/color_selector_light</item>
+        <item name="text_mail">@color/back_text_mail_graphite</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:windowActionBar">false</item>
     </style>
 </resources>

@@ -1,11 +1,12 @@
 package com.hctrom.romcontrol.licenseadapter;
 
+import android.content.res.Resources;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
@@ -24,13 +25,12 @@ public class LicenseMain extends AppCompatActivity {
     ThemeSelectorUtility theme = new ThemeSelectorUtility(this);
     theme.onActivityCreateSetTheme(this);
     setContentView(R.layout.license_main);
-    if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 3) {
-      getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
-    }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 0){
-      getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));
-    }else{
-      getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColor));
-    }
+    TypedValue typedValue = new TypedValue();
+	Resources.Theme theme1 = getTheme();
+	theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+	int color = typedValue.data;
+	getWindow().setStatusBarColor(color);
+		
     // Initializing Toolbar and setting it as the actionbar
     toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
@@ -63,6 +63,7 @@ public class LicenseMain extends AppCompatActivity {
     licenses.add(Licenses.fromGitHub("nisrulz/packagehunter", Licenses.LICENSE_APACHE_V2));
     licenses.add(Licenses.fromGitHub("edmodo/cropper", Licenses.LICENSE_APACHE_V2));
     licenses.add(Licenses.fromGitHub("flavioarfaria/KenBurnsView", Licenses.LICENSE_APACHE_V2));
+    licenses.add(Licenses.fromGitHub("Arjun-sna/android-passcodeview", Licenses.LICENSE_APACHE_V2));
 
     LicenseAdapter adapter = new LicenseAdapter(licenses);
     RecyclerView list = (RecyclerView) findViewById(R.id.list);

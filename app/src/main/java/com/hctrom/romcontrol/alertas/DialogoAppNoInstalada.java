@@ -4,8 +4,9 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
-import android.preference.PreferenceManager;
+import android.content.res.Resources;
 import android.support.v7.app.AlertDialog;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -48,16 +49,14 @@ public class DialogoAppNoInstalada {
         dialog.show();
 
         Button positive_button = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
-        if (PreferenceManager.getDefaultSharedPreferences(v.getContext()).getInt("theme_prefs", 0) == 3) {
-            dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
-            positive_button.setTextColor(v.getResources().getColor(R.color.color_iconos_samsung_light));
-        }else if (PreferenceManager.getDefaultSharedPreferences(v.getContext()).getInt("theme_prefs", 0) == 0){
-            dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
-            positive_button.setTextColor(v.getResources().getColor(R.color.myAccentColorHCT));
-        }else {
-            dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark_light);
-            positive_button.setTextColor(v.getResources().getColor(R.color.myAccentColor));
-        }
+        TypedValue typedValue2 = new TypedValue();
+        Resources.Theme theme2 = v.getContext().getTheme();
+        theme2.resolveAttribute(R.attr.colorPrimaryDark, typedValue2, true);
+        int color2 = typedValue2.data;
+
+        positive_button.setTextColor(color2);
+
+        ThemeSelectorUtility.ThemeDrawableBG(dialog, v.getContext());
 
         return dialog;
     }

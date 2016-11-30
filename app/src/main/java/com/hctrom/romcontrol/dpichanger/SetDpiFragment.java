@@ -80,7 +80,7 @@ public class SetDpiFragment extends DialogFragment {
             }
 
         // we build title pushing inside value from buffer reader (dpi string)
-        builder.setTitle(String.format(res.getString(R.string.show_current_dpi), dpi))
+        builder.setTitle("(" + dpi + ")" + (String.format(res.getString(R.string.show_current_dpi), dpi)))
                 .setIcon(R.drawable.profile)
                 .setSingleChoiceItems(R.array.dpi_dialog_items, getIndex(dpi), null)
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {

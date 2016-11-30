@@ -456,6 +456,11 @@
         <item>Theme Marshmallow Dark</item>
         <item>Theme Marshmallow Light</item>
         <item>Theme TouchWiz Light</item>
+        <item>Más...</item>
+    </string-array>
+    <string-array name="theme_items_personalize">
+        <item>Theme Red Dark</item>
+        <item>Theme Purpple Dark</item>
     </string-array>
     <string name="missing_su">El dispositivo no está rooteado o la aplicación negó los permisos de root.\n\nPor favor, confirma su estado root y vuelva a intentarlo más tarde.</string>
     <string name="exit">Salir</string>
@@ -470,7 +475,7 @@
 
     <!-- DPI CHANGER -->
     <string name="dialog_title">Selecciona Dpi</string>
-    <string name="show_current_dpi">Cambiar DPI\nSelecciona una opción:</string>
+    <string name="show_current_dpi"> DPI actual\nSelecciona una opción:</string>
     <string-array name="dpi_dialog_items">
         <item>480 dpi</item>
         <item>460 dpi</item>

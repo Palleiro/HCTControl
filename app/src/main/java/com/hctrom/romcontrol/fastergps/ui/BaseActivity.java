@@ -25,6 +25,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
@@ -35,6 +36,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -192,19 +194,17 @@ public class BaseActivity extends PreferenceActivity {
         );
         ThemeSelectorUtility theme = new ThemeSelectorUtility(this);
         theme.onActivityCreateSetTheme(this);
+		TypedValue typedValue = new TypedValue();
+        Resources.Theme theme1 = getTheme();
+        theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+        int color = typedValue.data;
+        getWindow().setStatusBarColor(color);
+		
         int i = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0);
-        if (i == 3) {
-            getListView().setBackgroundColor(getResources().getColor(R.color.myDrawerBackground));
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
-        }else if (i == 0){
+        if ((i%2 == 1 && i > 4)  || i == 0 || i == 1){
             getListView().setBackgroundColor(getResources().getColor(R.color.myInverseColor));
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));
-        }else if (i == 1){
-            getListView().setBackgroundColor(getResources().getColor(R.color.myInverseColor));
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColor));
         }else{
             getListView().setBackgroundColor(getResources().getColor(R.color.myDrawerBackground));
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColor));
         }
         LinearLayout root = (LinearLayout)findViewById(android.R.id.list).getParent().getParent().getParent();
         Toolbar bar = (Toolbar) LayoutInflater.from(this).inflate(R.layout.toolbar_default, root, false);

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    style="@style/AppTheme"
+    android:background="?attr/nav_drawer_bg_color"
+    tools:context=".passcodeview.PassCodeMain">
+    <ImageView
+        android:id="@+id/lockview"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dp"
+        android:src="@drawable/passcodeview_lock"
+        android:layout_marginTop="50dp" />
+    <TextView
+        android:id="@+id/promptview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduce un código de 4 dígitos como\n\nPIN de seguridad para acceder a HCTControl"
+        android:layout_below="@id/lockview"
+        android:textSize="18.0sp"
+        android:gravity="center"
+        android:padding="20.0dp"
+        android:layout_marginTop="50dp" />
+
+    <com.hctrom.romcontrol.passcodeview.PassCodeView
+        android:id="@+id/pass_code_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/promptview"
+        app:digits="4"
+        app:digit_size="30.0dp"
+        app:key_text_size="30.0sp"
+        android:padding="25.0dp"
+        app:empty_drawable="@drawable/passcodeview_empty_dot"
+        app:filled_drawable="@drawable/passcodeview_filled_dot"
+        android:layout_marginTop="30dp" />
+</RelativeLayout>

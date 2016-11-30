@@ -2,10 +2,11 @@ package com.hctrom.romcontrol.alertas;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.widget.Button;
 
@@ -56,19 +57,15 @@ public class DialogoAlertaReiniciar extends DialogFragment {
 
         Button positive_button = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
         Button negative_button = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
-        if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 3) {
-            dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
-            positive_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
-            negative_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
-        }else if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 0){
-            dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
-            positive_button.setTextColor(getResources().getColor(R.color.myAccentColorHCT));
-            negative_button.setTextColor(getResources().getColor(R.color.myAccentColorHCT));
-        }else {
-            dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark_light);
-            positive_button.setTextColor(getResources().getColor(R.color.myAccentColor));
-            negative_button.setTextColor(getResources().getColor(R.color.myAccentColor));
-        }
+        TypedValue typedValue2 = new TypedValue();
+        Resources.Theme theme2 = getActivity().getTheme();
+        theme2.resolveAttribute(R.attr.colorPrimaryDark, typedValue2, true);
+        int color2 = typedValue2.data;
+
+        positive_button.setTextColor(color2);
+        negative_button.setTextColor(color2);
+
+        ThemeSelectorUtility.ThemeDrawableBG(dialog, getActivity());
 
         return dialog;
     }

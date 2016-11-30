@@ -4,12 +4,13 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.util.TypedValue;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -51,7 +52,7 @@ public class RestorePreferences {
         ThemeSelectorUtility theme = new ThemeSelectorUtility(c);
         theme.onActivityCreateSetTheme(act);
         //first of all we will display a popup that if confirm will start the real restore
-        AlertDialog dialogConfirm = new AlertDialog.Builder(c)
+        AlertDialog dialog = new AlertDialog.Builder(c)
                 .setMessage(R.string.confirm_restore)
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
@@ -80,23 +81,19 @@ public class RestorePreferences {
                     }
                 })
                 .create();
-        dialogConfirm.show();
+        dialog.show();
 
-        Button positive_button = dialogConfirm.getButton(DialogInterface.BUTTON_POSITIVE);
-        Button negative_button = dialogConfirm.getButton(DialogInterface.BUTTON_NEGATIVE);
-        if (PreferenceManager.getDefaultSharedPreferences(act).getInt("theme_prefs", 0) == 3) {
-            dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
-            positive_button.setTextColor(act.getResources().getColor(R.color.color_iconos_samsung_light));
-            negative_button.setTextColor(act.getResources().getColor(R.color.color_iconos_samsung_light));
-        }else if (PreferenceManager.getDefaultSharedPreferences(act).getInt("theme_prefs", 0) == 0){
-            dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
-            positive_button.setTextColor(act.getResources().getColor(R.color.myAccentColorHCT));
-            negative_button.setTextColor(act.getResources().getColor(R.color.myAccentColorHCT));
-        }else {
-            dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark_light);
-            positive_button.setTextColor(act.getResources().getColor(R.color.myAccentColor));
-            negative_button.setTextColor(act.getResources().getColor(R.color.myAccentColor));
-        }
+        Button positive_button = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
+        Button negative_button = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme1 = act.getTheme();
+        theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+        int color = typedValue.data;
+
+        positive_button.setTextColor(color);
+        negative_button.setTextColor(color);
+
+        ThemeSelectorUtility.ThemeDrawableBG(dialog, act);
     }
 
     public void getFiles(){

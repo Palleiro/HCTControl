@@ -4,10 +4,12 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
+import android.util.TypedValue;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -15,6 +17,7 @@ import android.widget.ListAdapter;
 import android.widget.Toast;
 
 import com.hctrom.romcontrol.R;
+import com.hctrom.romcontrol.ThemeSelectorUtility;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -98,19 +101,15 @@ public class BackupPreferences {
                             dialogConfirm.show();
                             Button positive_button = dialogConfirm.getButton(DialogInterface.BUTTON_POSITIVE);
                             Button negative_button = dialogConfirm.getButton(DialogInterface.BUTTON_NEGATIVE);
-                            if (PreferenceManager.getDefaultSharedPreferences(c).getInt("theme_prefs", 0) == 3) {
-                                dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
-                                positive_button.setTextColor(c.getResources().getColor(R.color.color_iconos_samsung_light));
-                                negative_button.setTextColor(c.getResources().getColor(R.color.color_iconos_samsung_light));
-                            }else if (PreferenceManager.getDefaultSharedPreferences(c).getInt("theme_prefs", 0) == 0){
-                                dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
-                                positive_button.setTextColor(c.getResources().getColor(R.color.myAccentColorHCT));
-                                negative_button.setTextColor(c.getResources().getColor(R.color.myAccentColorHCT));
-                            }else {
-                                dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark_light);
-                                positive_button.setTextColor(c.getResources().getColor(R.color.myAccentColor));
-                                negative_button.setTextColor(c.getResources().getColor(R.color.myAccentColor));
-                            }
+                            TypedValue typedValue = new TypedValue();
+                            Resources.Theme theme1 = c.getTheme();
+                            theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+                            int color = typedValue.data;
+
+                            positive_button.setTextColor(color);
+                            negative_button.setTextColor(color);
+
+                            ThemeSelectorUtility.ThemeDrawableBG(dialogConfirm, c);
                         } else if (position == 1 ){
                             dialog.dismiss();
                             RestorePreferences rp = new RestorePreferences(c);
@@ -123,19 +122,15 @@ public class BackupPreferences {
         dialogConfirm.show();
         Button positive_button = dialogConfirm.getButton(DialogInterface.BUTTON_POSITIVE);
         Button negative_button = dialogConfirm.getButton(DialogInterface.BUTTON_NEGATIVE);
-        if (PreferenceManager.getDefaultSharedPreferences(c).getInt("theme_prefs", 0) == 3) {
-            dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
-            positive_button.setTextColor(c.getResources().getColor(R.color.color_iconos_samsung_light));
-            negative_button.setTextColor(c.getResources().getColor(R.color.color_iconos_samsung_light));
-        }else if (PreferenceManager.getDefaultSharedPreferences(c).getInt("theme_prefs", 0) == 0){
-            dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
-            positive_button.setTextColor(c.getResources().getColor(R.color.myAccentColorHCT));
-            negative_button.setTextColor(c.getResources().getColor(R.color.myAccentColorHCT));
-        }else {
-            dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark_light);
-            positive_button.setTextColor(c.getResources().getColor(R.color.myAccentColor));
-            negative_button.setTextColor(c.getResources().getColor(R.color.myAccentColor));
-        }
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme1 = c.getTheme();
+        theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+        int color = typedValue.data;
+
+        positive_button.setTextColor(color);
+        negative_button.setTextColor(color);
+
+        ThemeSelectorUtility.ThemeDrawableBG(dialogConfirm, c);
     }
 
     private void soundStock(){

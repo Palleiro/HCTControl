@@ -21,6 +21,7 @@
 package com.hctrom.romcontrol.fastergps.ui;
 
 import android.app.Activity;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.Preference;
@@ -30,6 +31,7 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -59,24 +61,22 @@ public class AdvancedSettingsActivity extends PreferenceActivity {
         super.onCreate(savedInstanceState);
         ThemeSelectorUtility theme = new ThemeSelectorUtility(this);
         theme.onActivityCreateSetTheme(this);
-        int i = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0);
-        if (i == 3) {
-            getListView().setBackgroundColor(getResources().getColor(R.color.myDrawerBackground));
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
-        }else if (i == 0){
-            getListView().setBackgroundColor(getResources().getColor(R.color.myInverseColor));
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));
-        }else if (i == 1){
-            getListView().setBackgroundColor(getResources().getColor(R.color.myInverseColor));
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColor));
-        }else{
-            getListView().setBackgroundColor(getResources().getColor(R.color.myDrawerBackground));
-            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColor));
-        }
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme1 = getTheme();
+        theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+        int color = typedValue.data;
+        getWindow().setStatusBarColor(color);
+		
         LinearLayout root = (LinearLayout)findViewById(android.R.id.list).getParent().getParent().getParent();
         Toolbar bar = (Toolbar) LayoutInflater.from(this).inflate(R.layout.toolbar_default, root, false);
         root.addView(bar, 0); // insert at top
         bar.setTitle("FasterGPS - Conf. Avanzada");
+        int i = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0);
+        if ((i%2 == 1 && i > 4)  || i == 0 || i == 1){
+            getListView().setBackgroundColor(getResources().getColor(R.color.myInverseColor));
+        }else{
+            getListView().setBackgroundColor(getResources().getColor(R.color.myDrawerBackground));
+        }
         bar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         bar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

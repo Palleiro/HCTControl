@@ -38,8 +38,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -54,6 +52,7 @@ import com.hctrom.romcontrol.alertas.DialogosMenuReiniciar;
 import com.hctrom.romcontrol.backup.BackupPreferences;
 import com.hctrom.romcontrol.blurry.Blurry;
 import com.hctrom.romcontrol.changelog.ChangeLog;
+import com.hctrom.romcontrol.passcodeview.PassCodeMain;
 import com.software.shell.fab.ActionButton;
 import com.stericson.RootTools.RootTools;
 
@@ -72,16 +71,24 @@ public class MainViewActivity extends AppCompatActivity
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
+    private static FragmentActivity myContext;
     private Toolbar mToolbar;
-    private Animation fab_open,fab_close;
+    //private Animation fab_open,fab_close;
     int[] ids;
     int[] ids_text;
     private File sddir;
     private File bkpdir;
-    private static FragmentActivity myContext;
+    //private static FragmentActivity myContext;
     ActionButton[] rebootFabs;
     TextView[] rebootFabs_text;
-    ActionButton reboot, hotboot, recovery, bl, ui, lch, incall, menu;
+    ActionButton reboot;
+    ActionButton hotboot;
+    ActionButton recovery;
+    ActionButton bl;
+    ActionButton ui;
+    ActionButton lch;
+    ActionButton incall;
+    static ActionButton menu;
     TextView text_reboot, text_hotboot, text_recovery, text_bl, text_ui, text_lch, text_incall;
     View overlay;
     AssetManager am;
@@ -102,15 +109,19 @@ public class MainViewActivity extends AppCompatActivity
         /*Calling theme selector class to set theme upon start activity*/
         ThemeSelectorUtility theme = new ThemeSelectorUtility(this);
         theme.onActivityCreateSetTheme(this);
-
-        if (PreferenceManager.getDefaultSharedPreferences(this).getInt("aviso_backup", 0) == 0) {
-            getAvisoBackupDialog();
+        String pass = PreferenceManager.getDefaultSharedPreferences(this).getString("pass_activate", "off");
+        String passmain = PreferenceManager.getDefaultSharedPreferences(this).getString("pass_main", "off");
+        if (pass.equals("on") && passmain.equals("off")){
+            PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("pass_main", "on").commit();
+            startActivity(new Intent(this, PassCodeMain.class));
+        }else{
+            if (PreferenceManager.getDefaultSharedPreferences(this).getInt("aviso_backup", 0) == 0) {
+                getAvisoBackupDialog();
+            }
+            //Getting root privileges upon first boot or if was not yet given su
+            CheckSu suPrompt = new CheckSu();
+            suPrompt.execute();
         }
-
-        //Getting root privileges upon first boot or if was not yet given su
-        CheckSu suPrompt = new CheckSu();
-        suPrompt.execute();
-
     }
 
     //Creates a list of NavItem objects to retrieve elements for the Navigation Drawer list of choices
@@ -189,7 +200,7 @@ public class MainViewActivity extends AppCompatActivity
             case 9:
                 BackupPreferences rp = new BackupPreferences(MainViewActivity.this);
                 rp.showBackupDialog();
-                //startActivity(new Intent(this, MainCropImageView.class));
+                //startActivity(new Intent(this, PassCodeMain.class));
                 break;
             case 10:
                 ChangeLog cl = new ChangeLog(this);
@@ -218,6 +229,7 @@ public class MainViewActivity extends AppCompatActivity
         }else if (mNavigationDrawerFragment.isDrawerOpen()){
             mNavigationDrawerFragment.closeDrawer();
         }else if (back_pressed + 2000 > System.currentTimeMillis()){
+            PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("pass_main", "off").commit();
             super.onBackPressed();
         }
         else{
@@ -232,7 +244,7 @@ public class MainViewActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.main_view, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
+/*
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         super.onPrepareOptionsMenu(menu);
@@ -252,12 +264,13 @@ public class MainViewActivity extends AppCompatActivity
         }
         return true;
     }
-
+*/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        SharedPreferences.Editor editor;
-        SharedPreferences prefs = getSharedPreferences("ConfigMenuFlotante", Context.MODE_PRIVATE);
+        //SharedPreferences.Editor editor;
+        //SharedPreferences prefs = getSharedPreferences("ConfigMenuFlotante", Context.MODE_PRIVATE);
         switch(item.getItemId()){
+            /*
             case R.id.option1:
                 if(item.isChecked()){
                     item.setChecked(false);
@@ -295,6 +308,10 @@ public class MainViewActivity extends AppCompatActivity
                     editor.putBoolean("floating_button_vista",true);
                     editor.commit();
                 }
+                break;
+                */
+            case R.id.option_hctcontrol:
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new HCTControlConfig()).commitAllowingStateLoss();
                 break;
             case R.id.action_reboot:
                     showHideRebootMenu();
@@ -438,6 +455,7 @@ public class MainViewActivity extends AppCompatActivity
                     public void onClick(DialogInterface dialog, int which) {
                         //Invokes method initTheme(int) - next method based on chosen theme
                         initTheme(which);
+                        dialog.dismiss();
                     }
                 })
         ;
@@ -463,11 +481,17 @@ public class MainViewActivity extends AppCompatActivity
     * then reads that integer when it's instantiated and sets the theme for the activity.
     * The activity is them rebooted, overriding pending transitions, to make the theme switch seemless.*/
     private void initTheme(int i) {
-        PreferenceManager.getDefaultSharedPreferences(this).edit().putInt("theme_prefs", i).commit();
-        finish();
-        this.overridePendingTransition(0, R.animator.fadeout);
-        startActivity(new Intent(this, MainViewActivity.class));
-        this.overridePendingTransition(R.animator.fadein, 0);
+        if (i == 4){
+            myContext = (FragmentActivity) this;
+            final ThemeSelectorUtilityCustom dialogo = new ThemeSelectorUtilityCustom();
+            dialogo.show(myContext.getSupportFragmentManager(), "tagAlerta");
+        }else{
+            PreferenceManager.getDefaultSharedPreferences(this).edit().putInt("theme_prefs", i).commit();
+            finish();
+            this.overridePendingTransition(0, R.animator.fadeout);
+            startActivity(new Intent(this, MainViewActivity.class));
+            this.overridePendingTransition(R.animator.fadein, 0);
+        }
     }
 
     //Asynchronous class to ask for su rights at the beginning of the activity. If the root rights have been denied or the device is not rooted, the app will not run.

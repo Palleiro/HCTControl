@@ -33,20 +33,23 @@
  */
 package com.hctrom.romcontrol.changelog;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.util.SparseArray;
+import android.util.TypedValue;
 import android.webkit.WebView;
 import android.widget.Button;
 
 import com.hctrom.romcontrol.R;
+import com.hctrom.romcontrol.ThemeSelectorUtility;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -326,19 +329,14 @@ public class ChangeLog {
 
         Button positive_button = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
         Button negative_button = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
-        if (PreferenceManager.getDefaultSharedPreferences(mContext).getInt("theme_prefs", 0) == 3) {
-            dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
-            positive_button.setTextColor(mContext.getResources().getColor(R.color.color_iconos_samsung_light));
-            negative_button.setTextColor(mContext.getResources().getColor(R.color.color_iconos_samsung_light));
-        }else if (PreferenceManager.getDefaultSharedPreferences(mContext).getInt("theme_prefs", 0) == 0){
-            dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
-            positive_button.setTextColor(mContext.getResources().getColor(R.color.myAccentColorHCT));
-            negative_button.setTextColor(mContext.getResources().getColor(R.color.myAccentColorHCT));
-        }else {
-            dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark_light);
-            positive_button.setTextColor(mContext.getResources().getColor(R.color.myAccentColor));
-            negative_button.setTextColor(mContext.getResources().getColor(R.color.myAccentColor));
-        }
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme1 = mContext.getTheme();
+        theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+        int color = typedValue.data;
+
+        positive_button.setTextColor(color);
+        negative_button.setTextColor(color);
+        ThemeSelectorUtility.ThemeDrawableBG(dialog, mContext);
 
         return dialog;
     }

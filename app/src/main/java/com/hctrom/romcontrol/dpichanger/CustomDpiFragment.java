@@ -74,7 +74,7 @@ public class CustomDpiFragment extends DialogFragment {
                     //we check if the value is in range and create/override the previous out script
                     //if not it will close activity and delete previous out script if present
 
-                    if ((x) >= 300 && (x) <= 650) {
+                    if ((x >= 300) && (x <= 650)) {
                             try {
                                 Command applyLive = new Command(0, "wm density " + mEdit.getText() );
                                 RootTools.getShell(true).add(applyLive);

@@ -2,6 +2,7 @@ package com.hctrom.romcontrol.logcat;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
@@ -13,6 +14,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,10 +25,10 @@ import com.hctrom.romcontrol.R;
 import com.hctrom.romcontrol.ThemeSelectorUtility;
 import com.hctrom.romcontrol.logcat.helper.PackageHelper;
 import com.hctrom.romcontrol.logcat.helper.PreferenceHelper;
-import com.hctrom.romcontrol.logcat.util.ArrayUtil;
-import com.hctrom.romcontrol.logcat.util.StringUtil;
 import com.hctrom.romcontrol.logcat.settings.MockDisabledListPreference;
 import com.hctrom.romcontrol.logcat.settings.MultipleChoicePreference;
+import com.hctrom.romcontrol.logcat.util.ArrayUtil;
+import com.hctrom.romcontrol.logcat.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,20 +64,18 @@ public class SettingsActivity extends PreferenceActivity implements OnPreference
 		);
 		ThemeSelectorUtility theme = new ThemeSelectorUtility(this);
 		theme.onActivityCreateSetTheme(this);
-		int i = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0);
-		if (i == 3) {
-			getListView().setBackgroundColor(getResources().getColor(R.color.myDrawerBackground));
-			getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
-		}else if (i == 0){
-			getListView().setBackgroundColor(getResources().getColor(R.color.myInverseColor));
-			getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));
-		}else if (i == 1){
-			getListView().setBackgroundColor(getResources().getColor(R.color.myInverseColor));
-			getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColor));
-		}else{
-			getListView().setBackgroundColor(getResources().getColor(R.color.myDrawerBackground));
-			getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColor));
-		}
+		TypedValue typedValue = new TypedValue();
+        Resources.Theme theme1 = getTheme();
+        theme1.resolveAttribute(R.attr.colorPrimaryDark, typedValue, true);
+        int color = typedValue.data;
+        getWindow().setStatusBarColor(color);
+		
+        int i = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0);
+        if (i == 0 || i == 1 | i == 4 || i == 5){
+            getListView().setBackgroundColor(getResources().getColor(R.color.myInverseColor));
+        }else{
+            getListView().setBackgroundColor(getResources().getColor(R.color.myDrawerBackground));
+        }
 		LinearLayout root = (LinearLayout)findViewById(android.R.id.list).getParent().getParent().getParent();
 		Toolbar bar = (Toolbar) LayoutInflater.from(this).inflate(R.layout.toolbar_default, root, false);
 		root.addView(bar, 0); // insert at top
