@@ -96,9 +96,9 @@
             android:layout_below="@id/lnTempFlash"
             style="@style/AppTheme" >
             <CheckBox
-                android:text="No volver a mostrar este diálogo.\n(podrá encender y apagar la linterna directamente desde el toggle del widget)"
+                android:text="Mostrar este diálogo.\n(Si lo desmarca, podrá encender y apagar la linterna directamente desde el toggle del widget)"
                 android:layout_height="wrap_content"
-                android:checked="false"
+                android:checked="true"
                 android:id="@+id/checkBoxFlash"
                 android:textSize="10sp"
                 android:layout_width="240dp"

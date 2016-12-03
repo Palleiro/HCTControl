@@ -446,11 +446,15 @@ public class MainViewActivity extends AppCompatActivity
 
     //Activates a chosen theme based on single choice list dialog, which opens upon selecting item at position 4 in nav drawer list
     private void showThemeChooserDialog() {
+        int sw = PreferenceManager.getDefaultSharedPreferences(this).getInt("theme_prefs", 0);
+        if (sw > 4){
+            sw = 4;
+        }
         AlertDialog.Builder b = new AlertDialog.Builder(this);
-        Adapter adapter = new ArrayAdapter<>(this, R.layout.simple_list_item_single_choice, getResources().getStringArray(R.array.theme_items));
+        final Adapter adapter = new ArrayAdapter<>(this, R.layout.simple_list_item_single_choice, getResources().getStringArray(R.array.theme_items));
         b.setIcon(R.drawable.ic_htc_personalize)
          .setTitle(getString(R.string.theme_chooser_dialog_title))
-                .setSingleChoiceItems((ListAdapter) adapter, PreferenceManager.getDefaultSharedPreferences(this).getInt("theme_prefs", 0), new DialogInterface.OnClickListener() {
+                .setSingleChoiceItems((ListAdapter) adapter, sw, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //Invokes method initTheme(int) - next method based on chosen theme

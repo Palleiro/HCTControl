@@ -50,4 +50,11 @@
                 android:data="mydata" />
         </PreferenceScreen>
     </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Widget" >
+        <SwitchPreference
+            android:title="Diálogo tiempo Flash en Widget"
+            android:key="menu_flash_widget"
+            android:summaryOn="Activado"
+            android:summaryOff="Desactivado" />
+    </PreferenceCategory>
 </PreferenceScreen>

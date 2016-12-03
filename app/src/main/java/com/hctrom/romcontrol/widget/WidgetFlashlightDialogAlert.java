@@ -5,6 +5,7 @@ package com.hctrom.romcontrol.widget;
  */
 
 
+import android.content.res.ColorStateList;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -29,6 +30,7 @@ public class WidgetFlashlightDialogAlert extends AppCompatActivity {
     private String temp, minutes;
     private TextView text_temp;
     private CheckBox checkDialogFlash;
+    private int flashWidget;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,13 @@ public class WidgetFlashlightDialogAlert extends AppCompatActivity {
         simpleChronometer = (Chronometer) findViewById(R.id.simpleChronometer);
         text_temp = (TextView) findViewById(R.id.text_security_flash) ;
         checkDialogFlash = (CheckBox) findViewById(R.id.checkBoxFlash);
+        checkDialogFlash.setButtonTintList(ColorStateList.valueOf(getResources().getColor(R.color.myPrimaryColorHCT)));
+        flashWidget = PreferenceManager.getDefaultSharedPreferences(this).getInt("aviso_temp_flash", 0);
+        if (flashWidget == 1){
+            checkDialogFlash.setChecked(true);
+        } else{
+            checkDialogFlash.setChecked(false);
+        }
         checkDialogFlash.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override

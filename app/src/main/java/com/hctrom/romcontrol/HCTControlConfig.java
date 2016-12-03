@@ -15,10 +15,10 @@ import android.widget.Toast;
 
 public class HCTControlConfig extends PreferenceFragment implements Preference.OnPreferenceClickListener {
     HandlePreferenceFragments hpf;
-    private SwitchPreference switchPreference_passcontrol, switchPreference_avisobackup, switchPreference_menushow, switchPreference_menuactivate;
+    private SwitchPreference switchPreference_menuflash_widget, switchPreference_passcontrol, switchPreference_avisobackup, switchPreference_menushow, switchPreference_menuactivate;
     private PreferenceScreen preferenceScreen_passreset;
     private String pass;
-    private int backup;
+    private int backup, flashWidget;
     private Animation fab_open,fab_close;
 
     @Override
@@ -32,12 +32,20 @@ public class HCTControlConfig extends PreferenceFragment implements Preference.O
         switchPreference_menushow = (SwitchPreference) findPreference("menu_show");
         switchPreference_menuactivate = (SwitchPreference) findPreference("menu_activate");
         preferenceScreen_passreset = (PreferenceScreen) findPreference("pass_reset");
+        switchPreference_menuflash_widget = (SwitchPreference) findPreference("menu_flash_widget");
     }
 
     @Override
     public void onResume() {
         super.onResume();
         hpf.onResumeFragment();
+        flashWidget = PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("aviso_temp_flash", 0);
+        if (flashWidget == 1){
+            switchPreference_menuflash_widget.setChecked(true);
+        } else{
+            switchPreference_menuflash_widget.setChecked(false);
+        }
+
         pass = PreferenceManager.getDefaultSharedPreferences(getActivity()).getString("pass_activate", "off");
         if (pass.equals("on")){
             switchPreference_passcontrol.setChecked(true);
@@ -70,6 +78,7 @@ public class HCTControlConfig extends PreferenceFragment implements Preference.O
         switchPreference_menushow.setOnPreferenceClickListener(this);
         switchPreference_menuactivate.setOnPreferenceClickListener(this);
         preferenceScreen_passreset.setOnPreferenceClickListener(this);
+        switchPreference_menuflash_widget.setOnPreferenceClickListener(this);
     }
 
     @Override
@@ -82,6 +91,14 @@ public class HCTControlConfig extends PreferenceFragment implements Preference.O
     public boolean onPreferenceClick(Preference preference) {
         SharedPreferences.Editor editor;
         SharedPreferences prefs = getActivity().getSharedPreferences("ConfigMenuFlotante", Context.MODE_PRIVATE);
+        if(preference == switchPreference_menuflash_widget) {
+            if (switchPreference_menuflash_widget.isChecked()){
+                PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext()).edit().putInt("aviso_temp_flash", 1).commit();
+            }else{
+                PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext()).edit().putInt("aviso_temp_flash", 0).commit();
+            }
+        }
+
         if(preference == switchPreference_passcontrol) {
             if (switchPreference_passcontrol.isChecked()){
                 PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext()).edit().putString("pass_activate", "on").commit();

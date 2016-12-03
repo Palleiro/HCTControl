@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -78,6 +79,8 @@ public class ImagenPerfil extends AppCompatActivity implements View.OnClickListe
         imgBackground = (KenBurnsView) findViewById(R.id.header_image);
 
         editText.setText(prefs.getString("check_text_profile", ""));
+        // Ocultamos teclado
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         if (prefs.getBoolean("check_image_profile", true)){
             checkBoxImage.setChecked(true);

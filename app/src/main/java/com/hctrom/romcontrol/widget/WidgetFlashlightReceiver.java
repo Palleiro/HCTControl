@@ -25,7 +25,7 @@ public class WidgetFlashlightReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_catlog_hctcontrol);
 
-        if (PreferenceManager.getDefaultSharedPreferences(context).getInt("aviso_temp_flash", 0) == 0) {
+        if (PreferenceManager.getDefaultSharedPreferences(context).getInt("aviso_temp_flash", 0) == 1) {
             Intent i = new Intent(context.getApplicationContext(), WidgetFlashlightDialogAlert.class);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);
