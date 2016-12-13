@@ -52,6 +52,7 @@ import com.hctrom.romcontrol.alertas.DialogosMenuReiniciar;
 import com.hctrom.romcontrol.backup.BackupPreferences;
 import com.hctrom.romcontrol.blurry.Blurry;
 import com.hctrom.romcontrol.changelog.ChangeLog;
+import com.hctrom.romcontrol.licenseadapter.LicenseDialogoAlerta;
 import com.hctrom.romcontrol.passcodeview.PassCodeMain;
 import com.software.shell.fab.ActionButton;
 import com.stericson.RootTools.RootTools;
@@ -78,7 +79,6 @@ public class MainViewActivity extends AppCompatActivity
     int[] ids_text;
     private File sddir;
     private File bkpdir;
-    //private static FragmentActivity myContext;
     ActionButton[] rebootFabs;
     TextView[] rebootFabs_text;
     ActionButton reboot;
@@ -312,6 +312,11 @@ public class MainViewActivity extends AppCompatActivity
                 */
             case R.id.option_hctcontrol:
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new HCTControlConfig()).commitAllowingStateLoss();
+                break;
+            case R.id.option_acerca_de:
+                myContext = (FragmentActivity) this;
+                final LicenseDialogoAlerta dialogo = new LicenseDialogoAlerta();
+                dialogo.show(myContext.getSupportFragmentManager(), "tagAlerta");
                 break;
             case R.id.action_reboot:
                     showHideRebootMenu();

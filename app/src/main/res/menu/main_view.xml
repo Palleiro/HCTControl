@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainViewActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainViewActivity">
     <!--
     <group android:checkableBehavior="all" android:id="@+id/menu" >
         <item
@@ -18,11 +19,17 @@
         </item>
     </group>
     -->
-    <group android:checkableBehavior="none" android:id="@+id/menu_config" >
+    <group android:checkableBehavior="none"
+        android:id="@+id/menu_config">
         <item
             android:id="@+id/option_hctcontrol"
             android:orderInCategory="100"
-            android:title="Opciones HCTControl" >
+            android:title="Opciones HCTControl">
+        </item>
+        <item
+            android:id="@+id/option_acerca_de"
+            android:orderInCategory="100"
+            android:title="Acerca de..." >
         </item>
     </group>
     <item

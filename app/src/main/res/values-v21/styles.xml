@@ -3,6 +3,8 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="colorPrimary">@color/myPrimaryColor</item>
         <item name="colorPrimaryDark">@color/myPrimaryDarkColor</item>
         <item name="colorAccent">@color/myAccentColor</item>
@@ -29,6 +31,8 @@
 
     <style name="AppThemeTomato" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColorTomatoDark</item>
         <item name="colorPrimaryDark">@color/myPrimaryColorTomatoDark</item>
         <item name="colorAccent">@color/myAccentColorTomato</item>
@@ -52,6 +56,8 @@
     </style>
     <style name="AppThemeTangerine" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColorTangerineDark</item>
         <item name="colorPrimaryDark">@color/myPrimaryColorTangerineDark</item>
         <item name="colorAccent">@color/myAccentColorTangerine</item>
@@ -75,6 +81,8 @@
     </style>
     <style name="AppThemeBanana" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColorBananaDark</item>
         <item name="colorPrimaryDark">@color/myPrimaryColorBananaDark</item>
         <item name="colorAccent">@color/myAccentColorBanana</item>
@@ -98,6 +106,8 @@
     </style>
     <style name="AppThemeBasil" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColorBasilDark</item>
         <item name="colorPrimaryDark">@color/myPrimaryColorBasilDark</item>
         <item name="colorAccent">@color/myAccentColorBasil</item>
@@ -121,6 +131,8 @@
     </style>
     <style name="AppThemeSage" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColorSageDark</item>
         <item name="colorPrimaryDark">@color/myPrimaryColorSageDark</item>
         <item name="colorAccent">@color/myAccentColorSage</item>
@@ -144,6 +156,8 @@
     </style>
     <style name="AppThemePeacock" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColorPeacockDark</item>
         <item name="colorPrimaryDark">@color/myPrimaryColorPeacockDark</item>
         <item name="colorAccent">@color/myAccentColorPeacock</item>
@@ -167,6 +181,8 @@
     </style>
     <style name="AppThemeBlueberry" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColorBlueberryDark</item>
         <item name="colorPrimaryDark">@color/myPrimaryColorBlueberryDark</item>
         <item name="colorAccent">@color/myAccentColorBlueberry</item>
@@ -190,6 +206,8 @@
     </style>
     <style name="AppThemeLavender" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColorLavenderDark</item>
         <item name="colorPrimaryDark">@color/myPrimaryColorLavenderDark</item>
         <item name="colorAccent">@color/myAccentColorLavender</item>
@@ -213,6 +231,8 @@
     </style>
     <style name="AppThemeGrape" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColorGrapeDark</item>
         <item name="colorPrimaryDark">@color/myPrimaryColorGrapeDark</item>
         <item name="colorAccent">@color/myAccentColorGrape</item>
@@ -236,6 +256,8 @@
     </style>
     <style name="AppThemeFlamingo" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColorFlamingoDark</item>
         <item name="colorPrimaryDark">@color/myPrimaryColorFlamingoDark</item>
         <item name="colorAccent">@color/myAccentColorFlamingo</item>
@@ -259,6 +281,8 @@
     </style>
     <style name="AppThemeGraphite" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColorGraphiteDark</item>
         <item name="colorPrimaryDark">@color/myPrimaryColorGraphiteDark</item>
         <item name="colorAccent">@color/myAccentColorGraphite</item>
@@ -282,6 +306,8 @@
     </style>
     <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColor</item>
         <item name="colorPrimaryDark">@color/myPrimaryDarkColor</item>
         <item name="colorAccent">@color/myAccentColor</item>
@@ -305,6 +331,8 @@
     </style>
     <style name="AppThemeHCT" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceDark</item>
+        <item name="android:itemBackground">@color/myInverseColor</item>
         <item name="colorPrimary">@color/myPrimaryColorHCT</item>
         <item name="colorPrimaryDark">@color/myPrimaryDarkColorHCT</item>
         <item name="colorAccent">@color/myAccentColorHCT</item>
@@ -328,6 +356,8 @@
     </style>
     <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="colorPrimary">@color/myAccentColor</item>
         <item name="colorPrimaryDark">@color/myPrimaryDarkColor</item>
         <item name="colorAccent">@color/myAccentColor</item>
@@ -353,6 +383,8 @@
     </style>
     <style name="AppThemeSamsungLight" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="colorPrimary">@color/myAccentColorSamsungLight</item>
         <item name="colorPrimaryDark">@color/myPrimaryDarkColorSamsungLight</item>
         <item name="colorAccent">@color/myAccentColorSamsungLight</item>
@@ -404,21 +436,21 @@
         <item name="android:padding">3dp</item>
         <item name="android:background">?attr/nav_drawer_bg_color</item>
     </style>
-    <style name="Light_UI" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
-        <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
-        <item name="android:navigationBarColor">@color/myNavigationColor</item>
-        <item name="android:windowBackground">@color/myWindowBackground</item>
-        <item name="navitextcolor">#000000</item>
-        <item name="nav_drawer_bg_color">#fff</item>
-        <item name="circle_anim_color">#ffffffff</item>
+    <style name="myCustomMenuTextApearanceDark" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@android:color/primary_text_dark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="myCustomMenuTextApearanceLight" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@android:color/primary_text_light</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <!-- Themes Light -->
 
     <style name="AppThemeTomatoLight" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
         <item name="android:navigationBarColor">@color/myNavigationColor</item>
@@ -445,6 +477,8 @@
     </style>
     <style name="AppThemeTangerineLight" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
         <item name="android:navigationBarColor">@color/myNavigationColor</item>
@@ -471,6 +505,8 @@
     </style>
     <style name="AppThemeBananaLight" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
         <item name="android:navigationBarColor">@color/myNavigationColor</item>
@@ -497,6 +533,8 @@
     </style>
     <style name="AppThemeBasilLight" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
         <item name="android:navigationBarColor">@color/myNavigationColor</item>
@@ -523,6 +561,8 @@
     </style>
     <style name="AppThemeSageLight" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
         <item name="android:navigationBarColor">@color/myNavigationColor</item>
@@ -549,6 +589,8 @@
     </style>
     <style name="AppThemePeacockLight" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
         <item name="android:navigationBarColor">@color/myNavigationColor</item>
@@ -575,6 +617,8 @@
     </style>
     <style name="AppThemeBlueberryLight" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
         <item name="android:navigationBarColor">@color/myNavigationColor</item>
@@ -601,6 +645,8 @@
     </style>
     <style name="AppThemeLavenderLight" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
         <item name="android:navigationBarColor">@color/myNavigationColor</item>
@@ -627,6 +673,8 @@
     </style>
     <style name="AppThemeGrapeLight" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
         <item name="android:navigationBarColor">@color/myNavigationColor</item>
@@ -653,6 +701,8 @@
     </style>
     <style name="AppThemeFlamingoLight" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
         <item name="android:navigationBarColor">@color/myNavigationColor</item>
@@ -680,6 +730,8 @@
     <style name="AppThemeGraphiteLight" parent="Theme.AppCompat.Light.NoActionBar">
 
         <!-- Customize your theme here. -->
+        <item name="android:itemTextAppearance">@style/myCustomMenuTextApearanceLight</item>
+        <item name="android:itemBackground">@color/myInverseColorLight</item>
         <item name="android:textColorPrimary">@color/myTextPrimaryColorLight</item>
         <item name="android:textColorPrimaryInverse">@color/myInverseColorLight</item>
         <item name="android:navigationBarColor">@color/myNavigationColor</item>
