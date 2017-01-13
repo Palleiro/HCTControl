@@ -4,10 +4,7 @@ package com.hctrom.romcontrol.widget;
  * Created by Palleiro on 18/04/2016.
  */
 
-import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
@@ -49,19 +46,6 @@ public class WidgetPower extends AppCompatActivity implements  View.OnClickListe
         }else {
             return super.onKeyUp(keyCode, event);
         }
-    }
-
-    /**
-     * Comprueba si hay conexión a internet.
-     * @return boolean
-     */
-    private boolean existeConexionInternet() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            return true;
-        }
-        return false;
     }
 
     /*Handling onClick event for the Reboot Menu (round Action Buttons array)

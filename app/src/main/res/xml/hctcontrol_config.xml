@@ -2,10 +2,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="SEGURIDAD" >
         <SwitchPreference
-            android:title="PIN de seguridad para acceder a HCTControl"
+            android:title="PIN acceso HCTControl"
             android:key="pass_check"
-            android:summaryOn="Activado"
-            android:summaryOff="Desactivado" />
+            android:summaryOn="PIN de seguridad para acceder a HCTControl ACTIVADO."
+            android:summaryOff="PIN de seguridad para acceder a HCTControl DESACTIVADO." />
         <PreferenceScreen
             android:widgetLayout="@layout/round_more_icon"
             android:title="Cambiar PIN de seguridad"
@@ -20,17 +20,17 @@
     </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="Aviso Backup HCTControl" >
         <SwitchPreference
-            android:title="Mostrar diálogo inicio recordando hacer una copia de seguridad"
+            android:title="Diálogo copia de seguridad"
             android:key="show_backup"
-            android:summaryOn="Mostrar"
-            android:summaryOff="NO mostrar" />
+            android:summaryOn="Diálogo inicio recordando hacer una copia de seguridad ACTIVADO."
+            android:summaryOff="Diálogo inicio recordando hacer una copia de seguridad DESACTIVADO." />
     </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="Menú flotante" >
         <SwitchPreference
-            android:title="Mostrar botón flotante para acceder al Menú lateral"
+            android:title="Mostrar botón flotante"
             android:key="menu_show"
-            android:summaryOn="Mostrando"
-            android:summaryOff="Ocultado" />
+            android:summaryOn="MOSTRANDO botón menú flotante para acceder al Menú lateral."
+            android:summaryOff="Botón menú flotante para acceder al Menú lateral OCULTADO." />
         <SwitchPreference
             android:title="Activar botón Menú flotante"
             android:key="menu_activate"
@@ -41,7 +41,7 @@
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="Perfil" >
         <PreferenceScreen
             android:widgetLayout="@layout/round_more_icon"
-            android:title="Personalizar cabecera de HCTControl"
+            android:title="Personalizar cabecera HCTControl"
             android:summary="Personalizar nombre, imagen de perfil y fondo cabecera del menú lateral de HCTControl" >
             <intent
                 android:action="android.intent.action.MAIN"
@@ -50,11 +50,18 @@
                 android:data="mydata" />
         </PreferenceScreen>
     </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="OTA" >
+        <SwitchPreference
+            android:title="OTA Update Rom"
+            android:key="ota_auto_update"
+            android:summaryOn="Buscar actualizaciones automáticamente ACTIVADO."
+            android:summaryOff="Buscar actualizaciones automáticamente DESACTIVADO." />
+    </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="Widget" >
         <SwitchPreference
-            android:title="Diálogo tiempo Flash en Widget"
+            android:title="Diálogo Flash Widget"
             android:key="menu_flash_widget"
-            android:summaryOn="Activado"
-            android:summaryOff="Desactivado" />
+            android:summaryOn="Diálogo tiempo Flash en Widget ACTIVADO."
+            android:summaryOff="Diálogo tiempo Flash en Widget DESACTIVADO." />
     </PreferenceCategory>
 </PreferenceScreen>

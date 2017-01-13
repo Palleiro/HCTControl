@@ -67,12 +67,26 @@
             android:targetClass="org.omnirom.omniswitch.SettingsActivity" />
     </PreferenceScreen>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="HCT OTA">
+        <!--
         <PreferenceScreen
             android:icon="@drawable/ic_ota"
             android:widgetLayout="@layout/round_more_icon"
             android:key="com.otaupdater.OTAUpdaterActivity"
             android:summary="Accede a nuestra zona de descargas (ROM, Kernels, Zips Flasheables...)"
             android:title="HCT OTA" />
+
+        -->
+        <PreferenceScreen
+            android:icon="@drawable/ic_ota"
+            android:widgetLayout="@layout/round_more_icon"
+            android:summary="Accede a nuestra zona de descargas (ROM, Kernels, Zips Flasheables...)"
+            android:title="HCT OTA" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.hctrom.romcontrol"
+                android:targetClass="com.hctrom.romcontrol.otaupdater.activity.MainActivity"
+                android:data="mydata" />
+        </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="AdBlocker">
         <CheckBoxPreference

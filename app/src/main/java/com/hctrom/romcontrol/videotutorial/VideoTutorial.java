@@ -4,12 +4,9 @@ package com.hctrom.romcontrol.videotutorial;
  * Created by Palleiro on 18/04/2016.
  */
 
-import android.content.Context;
 import android.content.res.Resources;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentManager;
@@ -28,6 +25,7 @@ import android.widget.Toast;
 import com.hctrom.romcontrol.R;
 import com.hctrom.romcontrol.ThemeSelectorUtility;
 import com.hctrom.romcontrol.alertas.DialogoAlertaConexion;
+import com.hctrom.romcontrol.prefs.NetworkAvailable;
 
 import java.io.IOException;
 
@@ -63,7 +61,8 @@ public class VideoTutorial extends AppCompatActivity implements SurfaceHolder.Ca
         }
 
         // Comprobamos conexión a internet
-        if (existeConexionInternet()) {
+        Boolean conexion = NetworkAvailable.existeConexionInternet(this);
+        if (conexion) {
             surfaceView = (SurfaceView)findViewById(R.id.surfaceview);
             surfaceHolder = surfaceView.getHolder();
             surfaceHolder.addCallback(this);
@@ -106,19 +105,6 @@ public class VideoTutorial extends AppCompatActivity implements SurfaceHolder.Ca
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    /**
-     * Comprueba si hay conexión a internet.
-     * @return boolean
-     */
-    private boolean existeConexionInternet() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            return true;
-        }
-        return false;
     }
 
     @Override

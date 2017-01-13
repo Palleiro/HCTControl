@@ -408,6 +408,7 @@
         <item name="text_mail">@color/back_text_mail_samsung</item>
     </style>
     <style name="Theme.Transparent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">?attr/colorPrimaryDark</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@color/windowBgTransparent</item>
         <item name="android:windowContentOverlay">@null</item>

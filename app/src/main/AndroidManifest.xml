@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.CALL_PRIVILEGED"/>
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -121,6 +122,12 @@
         <activity android:name=".logcat.SettingsActivity"
             android:theme="@style/AppTheme" />
 
+        <activity android:name=".otaupdater.activity.DialogActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+
+        <activity android:name=".otaupdater.activity.MainActivity"
+            android:theme="@style/AppTheme" />
+
         <activity android:name=".widget.WidgetPower"
             android:theme="@style/Theme.AppCompat.Translucent" />
 
@@ -164,6 +171,15 @@
         <service android:name=".logcat.CrazyLoggerService"
             android:enabled="true"
             android:exported="true" />
+
+        <service android:name=".otaupdater.service.UpdateChecker" />
+
+        <receiver android:name=".otaupdater.service.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
 
         <activity
             android:name=".toolboxsettings.ToolboxSettings"

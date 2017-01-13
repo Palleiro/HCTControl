@@ -64,6 +64,9 @@ public class LicenseMain extends AppCompatActivity {
     licenses.add(Licenses.fromGitHub("edmodo/cropper", Licenses.LICENSE_APACHE_V2));
     licenses.add(Licenses.fromGitHub("flavioarfaria/KenBurnsView", Licenses.LICENSE_APACHE_V2));
     licenses.add(Licenses.fromGitHub("Arjun-sna/android-passcodeview", Licenses.LICENSE_APACHE_V2));
+    licenses.add(Licenses.fromGitHub("square/okhttp", Licenses.LICENSE_APACHE_V2));
+    licenses.add(Licenses.fromGitHub("kevinsawicki/http-request", Licenses.LICENSE_APACHE_V2));
+    licenses.add(Licenses.fromGitHub("Grace5921/OtaUpdater", Licenses.LICENSE_APACHE_V2));
 
     LicenseAdapter adapter = new LicenseAdapter(licenses);
     RecyclerView list = (RecyclerView) findViewById(R.id.list);

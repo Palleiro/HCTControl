@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".otaupdater.activity.MainActivity"
+    style="@style/AppTheme"
+    android:background="?attr/nav_drawer_bg_color">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_default" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/content_frame"
+        android:layout_height="120pt"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/checkBoxAutoCheck"
+        android:layout_marginBottom="20dp" />
+
+    <CheckBox
+        android:text="@string/check_auto_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxAutoCheck"
+        android:layout_above="@+id/activity_main_check_for_update"
+        android:layout_alignParentBottom="false"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        android:text="@string/check_for_update_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_main_check_for_update"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:fontFamily="casual"
+        android:textStyle="normal|bold"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorAccent"
+        android:textColor="@android:color/white"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

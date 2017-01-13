@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class HCTControlConfig extends PreferenceFragment implements Preference.OnPreferenceClickListener {
     HandlePreferenceFragments hpf;
-    private SwitchPreference switchPreference_menuflash_widget, switchPreference_passcontrol, switchPreference_avisobackup, switchPreference_menushow, switchPreference_menuactivate;
+    private SwitchPreference switchPreference_ota_auto_update, switchPreference_menuflash_widget, switchPreference_passcontrol, switchPreference_avisobackup, switchPreference_menushow, switchPreference_menuactivate;
     private PreferenceScreen preferenceScreen_passreset;
     private String pass;
     private int backup, flashWidget;
@@ -33,12 +33,20 @@ public class HCTControlConfig extends PreferenceFragment implements Preference.O
         switchPreference_menuactivate = (SwitchPreference) findPreference("menu_activate");
         preferenceScreen_passreset = (PreferenceScreen) findPreference("pass_reset");
         switchPreference_menuflash_widget = (SwitchPreference) findPreference("menu_flash_widget");
+        switchPreference_ota_auto_update = (SwitchPreference) findPreference("ota_auto_update");
     }
 
     @Override
     public void onResume() {
         super.onResume();
         hpf.onResumeFragment();
+        Boolean checkAuto = PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean("ota_autocheck", true);
+        if (checkAuto == true) {
+            switchPreference_ota_auto_update.setChecked(true);
+        }else{
+            switchPreference_ota_auto_update.setChecked(false);
+        }
+
         flashWidget = PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("aviso_temp_flash", 0);
         if (flashWidget == 1){
             switchPreference_menuflash_widget.setChecked(true);
@@ -79,6 +87,7 @@ public class HCTControlConfig extends PreferenceFragment implements Preference.O
         switchPreference_menuactivate.setOnPreferenceClickListener(this);
         preferenceScreen_passreset.setOnPreferenceClickListener(this);
         switchPreference_menuflash_widget.setOnPreferenceClickListener(this);
+        switchPreference_ota_auto_update.setOnPreferenceClickListener(this);
     }
 
     @Override
@@ -148,6 +157,14 @@ public class HCTControlConfig extends PreferenceFragment implements Preference.O
                 editor.putBoolean("floating_button_activador",false);
                 editor.commit();
                 MainViewActivity.menu.setEnabled(false);
+            }
+        }
+
+        if(preference == switchPreference_ota_auto_update) {
+            if (switchPreference_ota_auto_update.isChecked()){
+                PreferenceManager.getDefaultSharedPreferences(getActivity()).edit().putBoolean("ota_autocheck", true).commit();
+            }else{
+                PreferenceManager.getDefaultSharedPreferences(getActivity()).edit().putBoolean("ota_autocheck", false).commit();
             }
         }
 

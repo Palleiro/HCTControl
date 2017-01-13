@@ -974,4 +974,30 @@ Usando el comando \'revert\' puede restaurar dicho fichero.</string>
         <item>Al tocar</item>
         <item>Siempre</item>
     </string-array>
+
+    <!-- OTA -->
+    <string name="romupdater_update_available">¡Nueva actualización disponible!</string>
+    <string name="romupdater_update_available_description_dialog">La actualización %1$s está disponible para descargar. Descargando la última actualización tendrás las novedades, mejoras y soluciones de errores más recientes de %2$s.</string>
+    <string name="romupdater_update_available_description_dialog_before_release_notes">La actualización %1$s está disponible para descargar.\n\nIncluye las siguientes novedades:\n%2$s</string>
+    <string name="romupdater_update_available_description_snackbar">¡La actualización %1$s está disponible!</string>
+    <string name="romupdater_update_available_description_notification">La actualización %1$s de %2$s está disponible para descargar</string>
+    <string name="romupdater_update_not_available">No hay actualizaciones disponibles</string>
+    <string name="romupdater_update_not_available_description">¡Tienes la última versión disponible de %s!</string>
+    <string name="romupdater_btn_update">Actualizar</string>
+    <string name="romupdater_btn_disable">No mostrar de nuevo</string>
+    <string name="romupdater_btn_dismiss">Ocultar</string>
+
+    <string name="install">Instalar</string>
+    <string name="choose_app_to_open">Abrir con?</string>
+    <string name="download">Descargar</string>
+    <string name="refresh">Refrescar</string>
+    <string name="nothing_to_show">Nada que mostrar</string>
+    <string name="no_network_available">Sin conexión a Internet</string>
+    <string name="something_went_wrong">Vaya! Algo ha salido mal</string>
+    <string name="connecting_to_github">Conectando con Github…</string>
+    <string name="check_for_update_now">Comprobar actualización ahora</string>
+    <string name="last_check">Última comprobación</string>
+    <string name="previous_releases">Publicaciones anteriores</string>
+    <string name="latest_release">Última publicación</string>
+    <string name="check_auto_update">Comprobar actualizaciones de Rom automáticamente.</string>
 </resources>

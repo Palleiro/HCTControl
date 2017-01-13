@@ -62,20 +62,10 @@ public class Tab2Battery extends Fragment {
             mTextViewInfo.setText(mTextViewInfo.getText() + "\n• Conexión : " + getPlugTypeString(plugged));
             if (isConnected(intent)){
                 mTextViewInfo.setText(mTextViewInfo.getText() + "\n• Nivel Batería : "+ mProgressStatus + "%  -");
-                if (level == 100){
-                    imageView.setImageResource(R.drawable.battery_full);
-                }else {
-                    imageView.setImageResource(R.drawable.battery_charging);
-                }
+                imageView.setImageResource(R.drawable.battery_charging);
             }else{
                 mTextViewInfo.setText(mTextViewInfo.getText() + "\n• Nivel Batería : "+ mProgressStatus + "%  -");
-                if (level == 100) {
-                    imageView.setImageResource(R.drawable.battery_full);
-                }else if (level >= 16){
-                    imageView.setImageResource(R.drawable.battery_descharging);
-                }else{
-                    imageView.setImageResource(R.drawable.battery_min);
-                }
+                imageView.setImageResource(R.drawable.battery_descharging);
             }
             mTextViewInfo.setText(mTextViewInfo.getText() + "\n• Estado : " + getHealthString(health));
             mTextViewInfo.setText(mTextViewInfo.getText() + "\n• Voltaje : " + voltage);
