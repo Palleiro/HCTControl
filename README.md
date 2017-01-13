@@ -56,8 +56,8 @@
 Actualización de Rom(Unofficial) vía OTA. Aviso mediante una notificación y búsqueda de actualizaciones automáticas o manuales.
 Son necesarios dos archivos de configuración, Updater.xml y updater-old-release.json. 
 Aquí podrás ver los ejemplos de estos archivos:
-- <a href="https://raw.githubusercontent.com/Grace5921/OtaUpdater/master/Updater.xml">Updater.xml</a>  
-- <a href="https://raw.githubusercontent.com/Grace5921/OtaUpdater/master/updater-old-release.json">updater-old-release.json</a>  
+- <a href="https://raw.githubusercontent.com/Palleiro/HCTControl/master/Xtras/OTA/Updater.xml">Updater.xml</a>  
+- <a href="https://raw.githubusercontent.com/Palleiro/HCTControl/master/Xtras/OTA/updater-old-release.json">updater-old-release.json</a>  
 - Enlace a <a href="https://github.com/Palleiro/HCTControl/tree/master/Xtras/OTA">carpeta</a>
 
 ### Configuración archivo .json
@@ -101,10 +101,10 @@ Sabes que hacer aqui :D.
 #### Añadir en el build.prop las siguientes lineas:
 ```
 ## Reemplazar el enlace por otro a su Updater.xml
-ro.updater.uri=https://raw.githubusercontent.com/Grace5921/OtaUpdater/master/Updater.xml
+ro.updater.uri=https://raw.githubusercontent.com/Palleiro/HCTControl/master/Xtras/OTA/Updater.xml
 
 ## Reemplazar el enlace por otro a su updater-old-release.json
-ro.updater.oldrelease.url=https://raw.githubusercontent.com/Grace5921/OtaUpdater/master/updater-old-release.json 
+ro.updater.oldrelease.url=https://raw.githubusercontent.com/Palleiro/HCTControl/master/Xtras/OTA/updater-old-release.json 
 
 ## Indicar fecha (Año Mes Día)
 ro.rom.version=AAmmdd
