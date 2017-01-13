@@ -52,7 +52,9 @@
 
 ##### Dar las gracias en nombre del `HCTeam` a todos los desarrolladores arriba mencionados por compartir su código y poder hacer esto más grande...
 
-### ● Configuración para OTA Update
+### ● Configuración para OTA Updater
+Actualización de Rom(Unofficial) vía OTA. Aviso mediante una notificación y búsqueda de actualizaciones automáticas o manuales.
+
 Son necesarios dos archivos de configuración, Updater.xml y updater-old-release.json. 
 Aquí podrás ver los ejemplos de estos archivos:
 - <a href="https://raw.githubusercontent.com/Grace5921/OtaUpdater/master/Updater.xml">Updater.xml</a>  
