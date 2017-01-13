@@ -44,11 +44,84 @@
 
 - Passcodeview: [Arjun-sna](https://github.com/Arjun-sna/android-passcodeview)
 
+- Okhttp: [Square](https://github.com/square/okhttp)
+
+- Http-request: [Kevinsawicki](https://github.com/kevinsawicki/http-request)
+
+- OtaUpdater: [Grace5921](https://github.com/Grace5921/OtaUpdater)
+
 ##### Dar las gracias en nombre del `HCTeam` a todos los desarrolladores arriba mencionados por compartir su código y poder hacer esto más grande...
+
+### ● Configuración para OTA Update
+Son necesarios dos archivos de configuración, Updater.xml y updater-old-release.json. 
+Aquí podrás ver los ejemplos de estos archivos:
+- <a href="https://raw.githubusercontent.com/Grace5921/OtaUpdater/master/Updater.xml">Updater.xml</a>  
+- <a href="https://raw.githubusercontent.com/Grace5921/OtaUpdater/master/updater-old-release.json">updater-old-release.json</a>  
+- Enlace a <a href="https://github.com/Palleiro/HCTControl/tree/master/Xtras/OTA">carpeta</a>
+
+### Configuración archivo .json
+
+#### Versión Stable o Beta ?
+configura 	
+```
+"stable" : "true"
+"prerelease" : "false",
+```
+Si su versión anterior es estable
+
+sino 
+```
+"prerelease" : "true",
+"stable": "false"
+```
+
+#### tag_name
+```
+"tag_name" : "Nombre de la Rom, por ejemplo HCTRom V6.0----"
+```
+
+#### name
+```
+"name" : "Establece el nombre del archivo (incluya la extensión .zip), este será el nombre del archivo que se descargará en el dispositivo"
+```
+
+#### release_date
+Sabes que hacer aqui :D.
+
+#### browser_download_url
+```
+"browser_download_url" : "Esto debe ser el enlace directo a su versión de Rom anterior"
+```
+#### body
+```
+"body" : "Agregue el changelog de cada nueva versión de Rom aquí"\n" "
+```
+
+#### Añadir en el build.prop las siguientes lineas:
+```
+## Reemplazar el enlace por otro a su Updater.xml
+ro.updater.uri=https://raw.githubusercontent.com/Grace5921/OtaUpdater/master/Updater.xml
+## Reemplazar el enlace por otro a su updater-old-release.json
+ro.updater.oldrelease.url=https://raw.githubusercontent.com/Grace5921/OtaUpdater/master/updater-old-release.json 
+## Indicar fecha (Año Mes Día)
+ro.rom.version=AAmmdd
+## Establezca true si queremos mostrar un toast cuando inicia el servicio
+ro.otaupdate.enable_toast=false
+## Establezca true si desea que el registro de la aplicación en su logcat sea falso
+ro.otaupdate.enable_log=true
+```
+
+### ● Configuración Anti-publicidad (ADS)
+Copiar los dos siguientes archivos en system/etc/
+
+- <a href="https://raw.githubusercontent.com/Palleiro/HCTControl/master/Xtras/HOST/system/etc/hosts.alt">hosts.alt</a>
+- <a href="https://raw.githubusercontent.com/Palleiro/HCTControl/master/Xtras/HOST/system/etc/hosts.og">hosts.og</a>
+- Enlace a <a href="https://github.com/Palleiro/HCTControl/tree/master/Xtras/HOST/system/etc">carpeta</a>
+
 
 ### ● Capturas
 
-![HCTControl](https://github.com/Palleiro/HCTControl/blob/master/HCTControl.png)
+[1]: https://raw.githubusercontent.com/Palleiro/HCTControl/master/HCTControl.png
 
 ● License
 -------
