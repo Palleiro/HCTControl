@@ -121,6 +121,8 @@ Copiar los dos siguientes archivos en system/etc/
 
 ### ● Capturas
 
+![HCTControl ][1]
+
 [1]: https://raw.githubusercontent.com/Palleiro/HCTControl/master/HCTControl.png
 
 ● License
