@@ -101,12 +101,16 @@ Sabes que hacer aqui :D.
 ```
 ## Reemplazar el enlace por otro a su Updater.xml
 ro.updater.uri=https://raw.githubusercontent.com/Grace5921/OtaUpdater/master/Updater.xml
+
 ## Reemplazar el enlace por otro a su updater-old-release.json
 ro.updater.oldrelease.url=https://raw.githubusercontent.com/Grace5921/OtaUpdater/master/updater-old-release.json 
+
 ## Indicar fecha (Año Mes Día)
 ro.rom.version=AAmmdd
+
 ## Establezca true si queremos mostrar un toast cuando inicia el servicio
 ro.otaupdate.enable_toast=false
+
 ## Establezca true si desea que el registro de la aplicación en su logcat sea falso
 ro.otaupdate.enable_log=true
 ```
